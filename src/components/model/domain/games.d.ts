@@ -10,7 +10,7 @@ export interface Games {
   genre: string[];
   vibe: string[];
   price: number; //made number do be able to do price comparision?
-  reviews: string; //should this be number if we do stars?
+  reviews: number; //should this be number if we do stars?
   multiplayer: string; //yes or no
   competitive: string; //yes or no
   developerSite: string; //link to developers site

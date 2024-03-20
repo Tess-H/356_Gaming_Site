@@ -4,23 +4,39 @@
     "description": "In this sequel to the Legend of Zelda: Breath of the Wild game, you’ll decide your own path through the sprawling landscapes of Hyrule and the mysterious islands floating in the vast skies above. Can you harness the power of Link’s new abilities to fight back against the malevolent forces that threaten the kingdom?",
     "image_cover": "/img/totk.png",
     "image_hero": "/img/totk_hero.jpg",
-    "musician": ["Manaka Kataoka"],
-    "similar_games": ["similar_games", "similar_games"],
-    "games_by_developers": ["similar_games", "similar_games"],
-    "genre": ["action", "adventure", "rpg"],
-    "vibe": ["vibe"],
-    "price": 0,
-    "reviews": "review",
+    "musician": [
+      "Manaka Kataoka",
+      "Maasa Miyoshi",
+      "Masato Ohashi",
+      "Tsukasa Usui"
+    ],
+    "similar_games": [
+      "Legend of Zelda Breath of the Wild",
+      "Genshin Impact",
+      "Immortals Fenxy Rising"
+    ],
+    "games_by_developers": [
+      "Legend of Zelda Breath of the Wild",
+      "Legend of Zelda Skyward Sword",
+      "Legend of Zelda Link's Awakening"
+    ],
+    "genre": ["Action-Adventure", "Puzzle", "Role-playing"],
+    "vibe": ["Cozy", "Story-driven", "Fantasy"],
+    "price": 70,
+    "reviews": 4.4,
     "multiplayer": "no",
     "competitive": "no",
-    "developer_site": "developer_site",
-    "sold_where": ["gamestop", "nintendo shop"],
+    "developer_site": "https://zelda.nintendo.com/tears-of-the-kingdom/",
+    "sold_where": ["Gamestop", "Nintendo Eshop", "Best Buy", "Target"],
     "rating": "E",
-    "awards": "game of the year",
-    "accessibilities": ["deaf", "colorblind"],
-    "warnings": ["none"],
-    "game_specs": "something",
-    "platform": ["playstation", "nintendo switch", "xbox", "pc"],
-    "memory_usage": "something"
+    "awards": [
+      "Game Award for Most Anticpated Game of the Year",
+      "Game Award for Best Action/Adventure"
+    ],
+    "accessibilities": ["Subtitles for Deafness"],
+    "warnings": ["None"],
+    "game_specs": "30fps",
+    "platform": ["Nintendo Switch"],
+    "memory_usage": "16.3GB"
   }
 ]
