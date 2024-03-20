@@ -2,10 +2,12 @@
 export interface Games {
   title: string; //name of game
   description: string;
+  imageCover: string;
+  imageHero: string;
   musician: string; //name of muscisian or band or whatever
   similarGames: string[]; //array of similar games
   gamesByDevelopers: string[]; //other games by same developers
-  genre: string;
+  genre: string[];
   vibe: string;
   price: number; //made number do be able to do price comparision?
   reviews: string; //should this be number if we do stars?

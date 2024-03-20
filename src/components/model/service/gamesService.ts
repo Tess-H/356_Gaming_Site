@@ -15,6 +15,8 @@ export const games: Games[] = gamesJson.map((gamesJson: any): Games => {
   return {
     title: gamesJson.title,
     description: gamesJson.description,
+    imageCover: gamesJson.imageCover,
+    imageHero: gamesJson.imageHero,
     musician: gamesJson.muscisian,
     similarGames: gamesJson.similarGames,
     gamesByDevelopers: gamesJson.gamesByDevelopers,
