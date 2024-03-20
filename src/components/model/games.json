@@ -1,14 +1,14 @@
 [
   {
     "title": "Legend of Zelda Tears of the Kingdom",
-    "description": "description",
+    "description": "In this sequel to the Legend of Zelda: Breath of the Wild game, you’ll decide your own path through the sprawling landscapes of Hyrule and the mysterious islands floating in the vast skies above. Can you harness the power of Link’s new abilities to fight back against the malevolent forces that threaten the kingdom?",
     "image_cover": "/img/totk.png",
     "image_hero": "/img/totk_hero.jpg",
-    "musician": "musician",
+    "musician": ["Manaka Kataoka"],
     "similar_games": ["similar_games", "similar_games"],
     "games_by_developers": ["similar_games", "similar_games"],
     "genre": ["action", "adventure", "rpg"],
-    "vibe": "vibe",
+    "vibe": ["vibe"],
     "price": 0,
     "reviews": "review",
     "multiplayer": "no",
@@ -18,7 +18,7 @@
     "rating": "E",
     "awards": "game of the year",
     "accessibilities": ["deaf", "colorblind"],
-    "warnings": "none",
+    "warnings": ["none"],
     "game_specs": "something",
     "platform": ["playstation", "nintendo switch", "xbox", "pc"],
     "memory_usage": "something"

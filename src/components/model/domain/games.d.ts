@@ -4,11 +4,11 @@ export interface Games {
   description: string;
   imageCover: string;
   imageHero: string;
-  musician: string; //name of muscisian or band or whatever
+  musician: string[]; //name of muscisian or band or whatever
   similarGames: string[]; //array of similar games
   gamesByDevelopers: string[]; //other games by same developers
   genre: string[];
-  vibe: string;
+  vibe: string[];
   price: number; //made number do be able to do price comparision?
   reviews: string; //should this be number if we do stars?
   multiplayer: string; //yes or no
@@ -18,7 +18,7 @@ export interface Games {
   rating: string; //e, e10, t, m, etc.
   awards: string;
   accessibilities: string[];
-  warnings: string;
+  warnings: string[];
   gameSpecs: string;
   platform: string[]; //platform game is playable on like xbox, pc, etc.
   memoryUsage: string;
