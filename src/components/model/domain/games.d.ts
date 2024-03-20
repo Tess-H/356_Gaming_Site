@@ -19,7 +19,7 @@ export interface Games {
   awards: string;
   accessibilities: string[];
   warnings: string[];
-  gameSpecs: string;
+  gameSpecs: string[];
   platform: string[]; //platform game is playable on like xbox, pc, etc.
   memoryUsage: string;
 }

@@ -35,8 +35,86 @@
     ],
     "accessibilities": ["Subtitles for Deafness"],
     "warnings": ["None"],
-    "game_specs": "30fps",
+    "game_specs": ["Frame Rate: 30fps"],
     "platform": ["Nintendo Switch"],
     "memory_usage": "16.3GB"
+  },
+  {
+    "title": "Legend of Zelda Breath of the Wild",
+    "description": "Open-world action-adventure game that redefines the traditional Zelda experience while staying true to the series' core elements. Set in the vast kingdom of Hyrule, players step into the shoes of Link, who awakens from a deep slumber to find a world in ruins, plagued by the malevolent force known as Calamity Ganon.",
+    "image_cover": "/img/botw.png",
+    "image_hero": "/img/botw_hero.jpg",
+    "musician": ["Manaka Kataoka", "Hajime Wakai,", "Yasuaki Iwata"],
+    "similar_games": [
+      "Legend of Zelda Tears of the Kingdom",
+      "Genshin Impact",
+      "Immortals Fenxy Rising"
+    ],
+    "games_by_developers": [
+      "Legend of Zelda Tears of the Kingdom",
+      "Legend of Zelda Skyward Sword",
+      "Legend of Zelda Link's Awakening"
+    ],
+    "genre": ["Action-Adventure", "Puzzle", "Role-playing"],
+    "vibe": ["Cozy", "Story-driven", "Fantasy"],
+    "price": 60,
+    "reviews": 4.8,
+    "multiplayer": "no",
+    "competitive": "no",
+    "developer_site": "https://zelda.nintendo.com/breath-of-the-wild/",
+    "sold_where": ["Gamestop", "Nintendo Eshop", "Best Buy", "Target"],
+    "rating": "E",
+    "awards": [
+      "The Game Award for Game of the Year",
+      "Game Award for Most Anticpated Game of the Year",
+      "Game Award for Best Action/Adventure",
+      "The Game Award for Best Game Direction",
+      "BAFTA Games Award for Innovation"
+    ],
+    "accessibilities": ["Subtitles for Deafness"],
+    "warnings": ["None"],
+    "game_specs": ["Frame Rate: 30fps"],
+    "platform": ["Nintendo Switch"],
+    "memory_usage": "13.4GB"
+  },
+  {
+    "title": "Genshin Impact",
+    "description": "Open-world action role-playing game set in the fantastical world of Teyvat, where players embark on an epic journey as the Traveler, seeking to unravel the mysteries of this sprawling land and reunite with their lost sibling. ",
+    "image_cover": "/img/gi.jpg",
+    "image_hero": "/img/gi_hero.png",
+    "musician": ["Yu-Peng Chen"],
+    "similar_games": [
+      "Legend of Zelda Tears of the Kingdom",
+      "Legend of Zelda Breath of the Wild",
+      "Immortals Fenxy Rising"
+    ],
+    "games_by_developers": [
+      "Tears of Themis",
+      "Honkai: Star Rail ",
+      "Zenless Zone Zero"
+    ],
+    "genre": ["Action-Adventure", "Role-playing"],
+    "vibe": ["Gacha", "Immersive", "Fantasy"],
+    "price": 0,
+    "reviews": 4.7,
+    "multiplayer": "Online",
+    "competitive": "TCG Online Tournaments",
+    "developer_site": "https://genshin.hoyoverse.com/",
+    "sold_where": ["Through Developer Website"],
+    "rating": "E",
+    "awards": [
+      "The Game Award - Player's Voice Award",
+      "The Game Award for Best Mobile Game"
+    ],
+    "accessibilities": ["Subtitles for Deafness"],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU: Intel Core i7 6700 AMD Ryzen 5 3600",
+      "RAM: 16GB",
+      "GPU: Nvidia GeForce GTX 1060 6GB",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": ["PC", "Mobile Device"],
+    "memory_usage": "8-30GB"
   }
 ]
