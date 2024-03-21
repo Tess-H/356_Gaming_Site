@@ -36,7 +36,7 @@
     "accessibilities": ["Subtitles for Deafness"],
     "warnings": ["None"],
     "game_specs": ["Frame Rate: 30fps"],
-    "platform": ["Nintendo Switch"],
+    "platform": ["/img/switch.png"],
     "memory_usage": "16.3GB"
   },
   {
@@ -74,7 +74,7 @@
     "accessibilities": ["Subtitles for Deafness"],
     "warnings": ["None"],
     "game_specs": ["Frame Rate: 30fps"],
-    "platform": ["Nintendo Switch"],
+    "platform": ["/img/switch.png"],
     "memory_usage": "13.4GB"
   },
   {
@@ -114,7 +114,919 @@
       "GPU: Nvidia GeForce GTX 1060 6GB",
       "Frame Rate: 60FPS"
     ],
-    "platform": ["PC", "Mobile Device"],
+    "platform": ["/img/pc.png", "/img/mobile.png"],
     "memory_usage": "8-30GB"
+  },
+  {
+    "title": "Immortals Fenyx Rising",
+    "description": "Open-world action-adventure game that transports players to the mythical world of Greek mythology, where they assume the role of Fenyx, a courageous hero tasked with saving the gods and reclaiming the land from the clutches of the titan Typhon.",
+    "image_cover": "/img/ifr.jpg",
+    "image_hero": "/img/ifr_hero.png",
+    "musician": ["Gareth Coker"],
+    "similar_games": [
+      "Legend of Zelda Tears of the Kingdom",
+      "Legend of Zelda Breath of the Wild",
+      "Genshin Impact"
+    ],
+    "games_by_developers": [
+      "Prince of Persia: The Lost Crown",
+      "Assassin's Creed Mirage",
+      "Far Cry 6"
+    ],
+    "genre": ["Action-Adventure", "Fighting", "Puzzle", "Shooter"],
+    "vibe": ["Story-driven", "Colorful", "Mythology"],
+    "price": 60,
+    "reviews": 4.4,
+    "multiplayer": "No",
+    "competitive": "No",
+    "developer_site": "https://www.ubisoft.com/en-us/game/immortals-fenyx-rising",
+    "sold_where": [
+      "Microsoft EShop, Playstation Eshop, Steam, Amazon, GameStop, Ubisoft Store"
+    ],
+    "rating": "T",
+    "awards": [
+      "Nominee NAVGTR Award. Animation, Artistic",
+      "Winner NAVGTR Award. Game, Original Action",
+      "Nominee NAVGTR Award. Original Dramatic Score, New IP",
+      "Winner NAVGTR Award. Performance in a Comedy, Lead. Daniel Matmor",
+      "Nominee NAVGTR Award. Performance in a Comedy, Supporting. Elias Toufexis"
+    ],
+    "accessibilities": [
+      "Subtitles and Indicators for Deafness",
+      "Settings Options for Colorblindness"
+    ],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU: AMD FX 6300 @ 3.5 GHz, Intel Core i5-2400 @ 3.1 GHz",
+      "RAM: 8GB",
+      "GPU: NVIDIA GeForce GTX 660 (2 GB)",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": [
+      "/img/pc.png",
+      "/img/xbox.png",
+      "/img/playstation.png",
+      "/img/switch.png"
+    ],
+    "memory_usage": "28GB"
+  },
+  {
+    "title": "Call of Duty: Black Ops Cold War",
+    "description": "Black Ops Cold War is set during the early 80s of the Cold War. The campaign follows CIA operative Russel Adler as he pursues an alleged Soviet spy, whose goal is to subvert the United States and tilt the balance of power towards the Soviet Union.",
+    "image_cover": "/img/codbo.jpg",
+    "image_hero": "/img/codbo_hero.jpg",
+    "musician": ["Jack Wall"],
+    "similar_games": ["Gears 5", "Borderlands 3", "Metal Gear Solid"],
+    "games_by_developers": [
+      "Call of Duty Black Ops II",
+      "Singularity",
+      "The Amazing Spider-Man (2012)"
+    ],
+    "genre": ["First Person Shooter", "Action"],
+    "vibe": ["Zombies", "PVP", "War", "Story-driven"],
+    "price": 60,
+    "reviews": 2.5,
+    "multiplayer": "Online",
+    "competitive": "Call of Duty Tournament League",
+    "developer_site": "https://www.callofduty.com/blackopscoldwar",
+    "sold_where": [
+      "Gamestop",
+      "Best Buy",
+      "Target",
+      "Microsoft EShop",
+      "Amazon"
+    ],
+    "rating": "M",
+    "awards": [
+      "Nominee Webby Award Best Game Design",
+      "Nominee Webby Award Best Art Direction",
+      "Nominee Webby Award Best Game Music/Sound Design"
+    ],
+    "accessibilities": [
+      "Subtitles and Indicators for Deafness",
+      "Settings Options for Colorblindness"
+    ],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU: Intel® Core™ i3-4340 or AMD FX-6300",
+      "RAM: 8GB",
+      "GPU: NVIDIA® GeForce® GTX 670 / NVIDIA® GeForce® GTX 1650 ",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": ["/img/pc.png", "/img/xbox.png", "/img/playstation.png"],
+    "memory_usage": "175GB"
+  },
+  {
+    "title": "Gears 5",
+    "description": "With all-out war descending, Kait Diaz breaks away to uncover her connection to the enemy and discovers the true danger to Sera - herself. From one of the most acclaimed game franchises in history, Gears 5 delivers an epic campaign and brutal action across five thrilling modes.",
+    "image_cover": "/img/g5.jpg",
+    "image_hero": "/img/g5_hero.jpg",
+    "musician": ["Ramin Djawadi", "Crispin Hands"],
+    "similar_games": [
+      "Call of Duty: Black Ops Cold War",
+      "Borderlands 3",
+      "Metal Gear Solid"
+    ],
+    "games_by_developers": ["Gears of War", "Gears of War 4", "Gears Tactics"],
+    "genre": ["Third Person Shooter", "Action-Adventure", "Horror"],
+    "vibe": ["Split-Screen", "Sci-fi", "War", "Story-driven"],
+    "price": 30,
+    "reviews": 3.8,
+    "multiplayer": "Local and Online",
+    "competitive": "no",
+    "developer_site": "https://www.gearsofwar.com/games/gears-5/",
+    "sold_where": [
+      "Gamestop",
+      "Best Buy",
+      "Target",
+      "Microsoft EShop",
+      "Amazon",
+      "Steam"
+    ],
+    "rating": "M",
+    "awards": [
+      "Game Critics Awards Best Action Game Nominee",
+      "Game Critics Awards Best Online Multiplayer Nominee",
+      "The Game Awards Best Action Game Nominee"
+    ],
+    "accessibilities": [
+      "Subtitles and Indicators for Deafness",
+      "Settings Options for Colorblindness",
+      "Settings to Remove Gore",
+      "Settings for Limited Mobility"
+    ],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU: Intel® Core™ i3 or AMD FX-6000",
+      "RAM: 8GB",
+      "GPU: NVIDIA GeForce® GTX 1050",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": ["/img/pc.png", "/img/xbox.png"],
+    "memory_usage": "42GB"
+  },
+  {
+    "title": "Borderlands 3",
+    "description": "The original shooter-looter returns, packing bazillions of guns and a mayhem-fueled adventure! Blast through new worlds and enemies as one of four new Vault Hunters.",
+    "image_cover": "/img/b3.jpg",
+    "image_hero": "/img/b3_hero.jpg",
+    "musician": ["Jesper Kyd", "Michael McCann", " Raison Varner"],
+    "similar_games": [
+      "Call of Duty: Black Ops Cold War",
+      "Gears 5",
+      "Metal Gear Solid"
+    ],
+    "games_by_developers": [
+      "Tiny Tina's Wonderlands",
+      "Homeworld",
+      "Half-Life Complete"
+    ],
+    "genre": ["Role-playing", "First Person Shooter", "Looter Shooter"],
+    "vibe": ["Comedy", "Sci-fi", "Story-driven"],
+    "price": 60,
+    "reviews": 3.9,
+    "multiplayer": "Local and Online",
+    "competitive": "no",
+    "developer_site": "https://borderlands.2k.com/",
+    "sold_where": [
+      "Gamestop",
+      "Best Buy",
+      "Target",
+      "Microsoft EShop",
+      "Amazon",
+      "Steam"
+    ],
+    "rating": "M",
+    "awards": ["BAFTA Best Multiplayer Nominee"],
+    "accessibilities": [
+      "Subtitles and Indicators for Deafness",
+      "Settings Options for Colorblindness",
+      "Settings for Limited Mobility"
+    ],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU:  AMD FX-8350 or Intel i5-3570",
+      "RAM: 6GB",
+      "GPU:  NVIDIA GeForce GTX 680 2 GB.",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": [
+      "/img/pc.png",
+      "/img/xbox.png",
+      "/img/playstation.png",
+      "/img/switch.png"
+    ],
+    "memory_usage": "75GB"
+  },
+  {
+    "title": "Metal Gear Rising: Revengeance",
+    "description": "METAL GEAR RISING: REVENGEANCE takes the renowned METAL GEAR franchise into exciting new territory with an all-new action experience. The game seamlessly melds pure action and epic story-telling that surrounds Raiden – a child soldier transformed into a half-human, half-cyborg ninja who uses his High Frequency katana blade to cut through any thing that stands in his vengeful path!",
+    "image_cover": "/img/mgr.jpg",
+    "image_hero": "/img/mgr_hero.jpg",
+    "musician": ["Jamie Christopherson"],
+    "similar_games": [
+      "Call of Duty: Black Ops Cold War",
+      "Gears 5",
+      "Borderlands 3"
+    ],
+    "games_by_developers": ["Bayonetta", "Babylon's Fall", "Astral Chain"],
+    "genre": ["Role-playing", "Hack and Slash", "Stealth"],
+    "vibe": ["Beat 'em Up", "Sci-fi", "Story-driven"],
+    "price": 30,
+    "reviews": 4.8,
+    "multiplayer": "no",
+    "competitive": "no",
+    "developer_site": "https://www.platinumgames.com/games/metal-gear-rising-revengeance",
+    "sold_where": ["Gamestop", "Walmart", "Microsoft EShop", "Amazon", "Steam"],
+    "rating": "M",
+    "awards": [
+      "2014 Winner BTVA Video Game Voice Acting Award",
+      "Nominee NAVGTR Award Character Design"
+    ],
+    "accessibilities": ["Subtitles for Deafness"],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU: Intel Core i7 3770",
+      "RAM: 4GB",
+      "GPU:  Nvidia Geforce GTX 650",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": ["/img/pc.png", "/img/xbox.png", "/img/playstation.png"],
+    "memory_usage": "25GB"
+  },
+  {
+    "title": "Elden Ring",
+    "description": "Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    "image_cover": "/img/er.jpg",
+    "image_hero": "/img/er_heros.jpg",
+    "musician": ["Tsukasa Saitoh", "Yoshimi Kudo", "Tai Tomisawa"],
+    "similar_games": [
+      "Star Wars: Jedi Survivor",
+      "Lies of P",
+      "The Witcher 3: Wild Hunt"
+    ],
+    "games_by_developers": ["Tales of Arise", "Darks Souls III", "Tekken 8"],
+    "genre": ["Role-playing", "Action-Adventure", "Fighting"],
+    "vibe": ["Dark Fantasy", "Souls-like", "Epic"],
+    "price": 60,
+    "reviews": 4.3,
+    "multiplayer": "Online",
+    "competitive": "PVP",
+    "developer_site": "https://en.bandainamcoent.eu/elden-ring/elden-ring",
+    "sold_where": [
+      "Gamestop",
+      "Walmart",
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Amazon",
+      "Steam"
+    ],
+    "rating": "M",
+    "awards": [
+      "2022 Winner The Game Award Game of the Year",
+      "2022 Winner The Game Award Best Game Direction",
+      "2022 Winner The Game Award Best Art Direction"
+    ],
+    "accessibilities": ["Subtitles for Deafness"],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU: INTEL CORE I7-8700K or AMD RYZEN 5 3600X",
+      "RAM: 16GB",
+      "GPU: NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8 GB",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": ["/img/pc.png", "/img/xbox.png", "/img/playstation.png"],
+    "memory_usage": "60GB"
+  },
+  {
+    "title": "Star Wars: Jedi Survivor",
+    "description": "This narratively driven, single-player title picks up 5 years after the events of Star Wars Jedi: Fallen Order™ and follows Cal’s increasingly desperate fight as the galaxy descends further into darkness. Pushed to the edges of the galaxy by the Empire, Cal will find himself surrounded by threats new and familiar. As one of the last surviving Jedi Knights, Cal is driven to make a stand during the galaxy’s darkest times — but how far is he willing to go to protect himself, his crew, and the legacy of the Jedi Order?",
+    "image_cover": "/img/js.jpg",
+    "image_hero": "/img/js_hero.jpg",
+    "musician": ["Gordy Haab", "Stephen Barton"],
+    "similar_games": ["Elden Ring", "Lies of P", "The Witcher 3: Wild Hunt"],
+    "games_by_developers": ["It Takes Two", "BattleField", "Apex Legends"],
+    "genre": ["Role-playing", "Action-Adventure", "Fighting"],
+    "vibe": ["Sci-fi", "Souls-like", "Epic"],
+    "price": 70,
+    "reviews": 3.7,
+    "multiplayer": "no",
+    "competitive": "no",
+    "developer_site": "https://www.ea.com/games/starwars/jedi/jedi-survivor",
+    "sold_where": [
+      "Gamestop",
+      "Walmart",
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Amazon",
+      "Target",
+      "Steam"
+    ],
+    "rating": "T",
+    "awards": [
+      "2024 Nominee BAFTA Games Award Best Animation",
+      "2024 Nominee BAFTA Games Award Audio Achievement",
+      "2024 Nominee BAFTA Games Award Best Narrative"
+    ],
+    "accessibilities": [
+      "Subtitles and Indicators for Deafness",
+      "Settings Options for Colorblindness",
+      "Settings for Limited Mobility"
+    ],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU: Intel Core i5 11600K",
+      "RAM: 16GB",
+      "GPU: RTX2070",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": ["/img/pc.png", "/img/xbox.png", "/img/playstation.png"],
+    "memory_usage": "155GB"
+  },
+  {
+    "title": "Lies of P",
+    "description": "You are a puppet created by Geppetto who’s caught in a web of lies with unimaginable monsters and untrustworthy figures standing between you and the events that have befallen the world of Lies of P.",
+    "image_cover": "/img/lop.jpg",
+    "image_hero": "/img/lop_hero.jpg",
+    "musician": ["Various Artists"],
+    "similar_games": [
+      "Elden Ring",
+      "Star Wars: Jedi Survivor",
+      "The Witcher 3: Wild Hunt"
+    ],
+    "games_by_developers": ["Skul: The Hero Slayer", "Metal Unit"],
+    "genre": ["Role-playing", "Action-Adventure", "Fighting"],
+    "vibe": ["Dark Fantasy", "Souls-like", "Story-driven"],
+    "price": 60,
+    "reviews": 4.1,
+    "multiplayer": "no",
+    "competitive": "no",
+    "developer_site": "https://www.liesofp.com/en-us/",
+    "sold_where": [
+      "Gamestop",
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Amazon",
+      "Steam"
+    ],
+    "rating": "M",
+    "awards": [
+      "2023 Nominee The Game Award Best Role Playing Game",
+      "2023 Nominee The Game Award Best Art Direction",
+      "2023 Nominee Golden Joystick Award Best Visual Design"
+    ],
+    "accessibilities": ["None"],
+    "warnings": ["None"],
+    "game_specs": [
+      "CPU: Intel Core i3-6300",
+      "RAM: 16GB",
+      "GPU: AMD Radeon RX 6500 XT 4GB",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": ["/img/pc.png", "/img/xbox.png", "/img/playstation.png"],
+    "memory_usage": "50GB"
+  },
+  {
+    "title": "The Witcher 3: Wild Hunt",
+    "description": "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri — the Child of Prophecy, a living weapon that can alter the shape of the world.",
+    "image_cover": "/img/w3wh.jpg",
+    "image_hero": "/img/w3wh_hero.jpg",
+    "musician": ["Marcin Przybyłowicz", "Mikolai Stroinski"],
+    "similar_games": ["Elden Ring", "Star Wars: Jedi Survivor", "Lies of P"],
+    "games_by_developers": ["Cyberpunk", "Witcher 2", "Gwent Rogue Mage"],
+    "genre": ["Role-playing", "Action-Adventure", "Fighting"],
+    "vibe": ["Fantasy", "Dark Fantasy", "Story-driven"],
+    "price": 40,
+    "reviews": 4.6,
+    "multiplayer": "no",
+    "competitive": "no",
+    "developer_site": "https://www.thewitcher.com/us/en/witcher3",
+    "sold_where": [
+      "Gamestop",
+      "Target",
+      "Walmart",
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Amazon",
+      "Steam"
+    ],
+    "rating": "M",
+    "awards": [
+      "2016 Nominee BAFTA Games Award Artistic Achievement",
+      "2016 Nominee BAFTA Games Award Audio Achievement",
+      "2016 Nominee BAFTA Games Award Best Game"
+    ],
+    "accessibilities": ["Subtitles for Deafness"],
+    "warnings": ["None"],
+    "game_specs": [
+      "CPU: Intel Core i5-7400",
+      "RAM: 8GB",
+      "GPU: Nvidia GTX 1070",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": [
+      "/img/pc.png",
+      "/img/xbox.png",
+      "/img/playstation.png",
+      "/img/switch.png"
+    ],
+    "memory_usage": "50GB"
+  },
+  {
+    "title": "Sonic Origins",
+    "description": "Experience the collected adventures of Sonic the Hedgehog in Sonic Origins Plus! With 16 legendary Sonic titles, including 12 Game Gear games, new playable characters, modes, challenges, behind-the-scenes content, and more, this is the definitive way to play these classic games!",
+    "image_cover": "/img/so.jpg",
+    "image_hero": "/img/so_hero.jpg",
+    "musician": ["Jun Senoue", "Tee Lopes"],
+    "similar_games": [
+      "Mario Galaxy",
+      "Ori and the Will of the Wisps",
+      "Rayman Legends"
+    ],
+    "games_by_developers": ["Sonic Superstars", "Sonic Frontiers"],
+    "genre": ["Platformer", "Action-Adventure"],
+    "vibe": ["Retro", "Casual"],
+    "price": 30,
+    "reviews": 4.1,
+    "multiplayer": "Local",
+    "competitive": "no",
+    "developer_site": "https://origins.sonicthehedgehog.com/",
+    "sold_where": [
+      "Gamestop",
+      "Target",
+      "Walmart",
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Amazon",
+      "Steam"
+    ],
+    "rating": "E",
+    "awards": ["None"],
+    "accessibilities": ["None"],
+    "warnings": ["None"],
+    "game_specs": [
+      "CPU: Intel Core i5-4570, 3.2 GHz",
+      "RAM: 8GB",
+      "GPU: NVIDIA GeForce GTX 770",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": [
+      "/img/pc.png",
+      "/img/xbox.png",
+      "/img/playstation.png",
+      "/img/switch.png"
+    ],
+    "memory_usage": "3.5GB"
+  },
+  {
+    "title": "Super Mario Galaxy",
+    "description": "Super Mario Galaxy is set in outer space, where Mario travels through different galaxies to collect Power Stars, earned by completing missions, defeating a boss, or reaching a particular area. Each galaxy contains planetoids and orbiting structures for the player to explore.",
+    "image_cover": "/img/smg.png",
+    "image_hero": "/img/smg_hero.jpg",
+    "musician": ["Mahito Yokota", "Koji Kondo"],
+    "similar_games": [
+      "Sonic Origins",
+      "Ori and the Will of the Wisps",
+      "Rayman Legends"
+    ],
+    "games_by_developers": ["Super Mario Odyssey", "New Super Mario Bros U"],
+    "genre": ["Platformer", "Action-Adventure"],
+    "vibe": ["Retro", "Casual", "Epic"],
+    "price": 20,
+    "reviews": 4.8,
+    "multiplayer": "Local",
+    "competitive": "no",
+    "developer_site": "https://www.nintendo.co.uk/Games/Wii/Super-Mario-Galaxy-283322.html",
+    "sold_where": ["Gamestop", "Amazon"],
+    "rating": "E",
+    "awards": [
+      "2009 Winner BAFTA Games Award Best Game",
+      "2008 Winner Interactive Achievement Award Adventure Game of the Year"
+    ],
+    "accessibilities": ["None"],
+    "warnings": ["None"],
+    "game_specs": ["None"],
+    "platform": ["/img/switch.png"],
+    "memory_usage": "3.3GB"
+  },
+  {
+    "title": "Ori and the Will of the Wisps",
+    "description": "The little spirit Ori is no stranger to peril, but when a fateful flight puts the owlet Ku in harms way, it will take more than bravery to bring a family back together, heal a broken land, and discover Ori's true destiny.",
+    "image_cover": "/img/oww.jpg",
+    "image_hero": "/img/oww_hero.jpg",
+    "musician": ["Gareth Coker"],
+    "similar_games": ["Sonic Origins", "Super Mario Galaxy", "Rayman Legends"],
+    "games_by_developers": [
+      "No Rest for the Wicked",
+      "Ori and the Blind Forest"
+    ],
+    "genre": ["Platformer", "Action-Adventure", "Puzzle"],
+    "vibe": ["Fantasy", "Souls-like", "Story-driven"],
+    "price": 30,
+    "reviews": 4.8,
+    "multiplayer": "no",
+    "competitive": "no",
+    "developer_site": "https://www.orithegame.com/",
+    "sold_where": [
+      "Gamestop",
+      "Target",
+      "Walmart",
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Amazon",
+      "Steam",
+      "Nintendo Eshop"
+    ],
+    "rating": "E",
+    "awards": ["2021 Nominee BAFTA Games Award Best Animation"],
+    "accessibilities": ["Subtitles for Deafness"],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU: Intel i5 Skylake",
+      "RAM: 8GB",
+      "GPU: Nvidia GTX 970",
+      "Frame Rate: 120FPS"
+    ],
+    "platform": [
+      "/img/pc.png",
+      "/img/xbox.png",
+      "/img/playstation.png",
+      "/img/switch.png"
+    ],
+    "memory_usage": "20GB"
+  },
+  {
+    "title": "Rayman Legends",
+    "description": "When Rayman, Globox, and the Teensies discover a mysterious tent filled with captivating paintings, they are suddenly transported to a series of mythical new worlds! Join them as they run, jump, and slap their way through each world to get home, save the day, and discover the secrets of the legendary paintings!",
+    "image_cover": "/img/rl.jpg",
+    "image_hero": "/img/rl_hero.jpg",
+    "musician": ["Christophe Heral"],
+    "similar_games": [
+      "Sonic Origins",
+      "Super Mario Galaxy",
+      "Ori and the Will of the Wisps"
+    ],
+    "games_by_developers": ["Beyond Good and Evil", "Raving Rabbids"],
+    "genre": ["Platformer", "Action-Adventure", "Fighting"],
+    "vibe": ["Comedy", "Casual"],
+    "price": 30,
+    "reviews": 4.8,
+    "multiplayer": "Local",
+    "competitive": "no",
+    "developer_site": "https://www.ubisoft.com/en-us/game/rayman/legends",
+    "sold_where": [
+      "Gamestop",
+      "Walmart",
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Amazon",
+      "Steam",
+      "Nintendo Eshop"
+    ],
+    "rating": "E",
+    "awards": [
+      "2014 Winner NAVGTR Award Control Design, 2D or Limited 3D",
+      "2013 Nominee VGX Best Nintendo Game"
+    ],
+    "accessibilities": [
+      "Subtitles and Indicators for Deafness",
+      "Settings Options for Colorblindness",
+      "Settings for Limited Mobility"
+    ],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU: Intel Core 2 Duo E4400",
+      "RAM: 2GB",
+      "GPU: NVidia GeForce 9600GT",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": [
+      "/img/pc.png",
+      "/img/xbox.png",
+      "/img/playstation.png",
+      "/img/switch.png"
+    ],
+    "memory_usage": "6GB"
+  },
+  {
+    "title": "Pokemon Violet",
+    "description": "Catch, battle, and train Pokémon in the Paldea Region, a vast land filled with lakes, towering peaks, wastelands, small towns, and sprawling cities. Explore a wide-open world at your own pace and traverse land, water, and air by riding on a form-shifting Legendary Pokémon Miraidon in the Pokémon Violet game.",
+    "image_cover": "/img/pv.jpg",
+    "image_hero": "/img/pv_hero.jpg",
+    "musician": [
+      "Toby Fox",
+      "Junichi Masuda",
+      "Go Ichinose",
+      "Minako Adachi",
+      "Hitomi Satō",
+      "Hiromitsu Maeba"
+    ],
+    "similar_games": ["Temtem", "Cassette Beast", "Coromon"],
+    "games_by_developers": [
+      "Pokemon Scarlet",
+      "Pokemon Let's Go Pikachu",
+      "Pokemon Black",
+      "Pokemon Platinum"
+    ],
+    "genre": ["Role-playing", "Adventure", "Creature-Collector"],
+    "vibe": ["Story-driven", "Casual", "Cozy", "Turn-Base"],
+    "price": 60,
+    "reviews": 2.9,
+    "multiplayer": "Online",
+    "competitive": "Pokemon Championship Series",
+    "developer_site": "https://www.nintendo.com/us/store/products/pokemon-violet-switch/",
+    "sold_where": ["Gamestop", "Walmart", "Amazon", "Nintendo Eshop"],
+    "rating": "E",
+    "awards": ["None"],
+    "accessibilities": [
+      "Subtitles and Indicators for Deafness",
+      "Settings Options for Colorblindness",
+      "Settings for Limited Mobility"
+    ],
+    "warnings": ["Seizures"],
+    "game_specs": ["None"],
+    "platform": ["/img/switch.png"],
+    "memory_usage": "6GB"
+  },
+  {
+    "title": "Temtem",
+    "description": "Every kid dreams about becoming a Temtem tamer; exploring the six islands of the Airborne Archipelago, discovering new species, and making good friends along the way. Now it’s your turn to embark on an epic adventure and make those dreams come true.",
+    "image_cover": "/img/tt.jpg",
+    "image_hero": "/img/tt_hero.jpg",
+    "musician": ["Damian Sanchez"],
+    "similar_games": ["Pokemon Violet", "Cassette Beast", "Nexomon"],
+    "games_by_developers": ["Immortal Redneck"],
+    "genre": ["Creature-Collector", "Adventure", "Role-playing"],
+    "vibe": ["Turn-Base", "Story-driven"],
+    "price": 45,
+    "reviews": 4.0,
+    "multiplayer": "Online",
+    "competitive": "TemTem Championship Series",
+    "developer_site": "https://crema.gg/games/temtem/",
+    "sold_where": [
+      "Gamestop",
+      "Walmart",
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Amazon",
+      "Steam",
+      "Nintendo Eshop"
+    ],
+    "rating": "E",
+    "awards": ["None"],
+    "accessibilities": [
+      "Subtitles and Indicators for Deafness",
+      "Settings for Limited Mobility"
+    ],
+    "warnings": ["Seizures"],
+    "game_specs": [
+      "CPU: Intel i3-6100T 3.2Ghz",
+      "RAM: 8GB",
+      "GPU: Nvidia GTX 970",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": [
+      "/img/pc.png",
+      "/img/xbox.png",
+      "/img/playstation.png",
+      "/img/switch.png"
+    ],
+    "memory_usage": "5GB"
+  },
+  {
+    "title": "Nexomon",
+    "description": "Catch, evolve and collect over 300 unique Nexomon! Assemble the ultimate Nexomon team to save your friends and the world! Clash against legendary champions and become a hero in this epic journey!",
+    "image_cover": "/img/nm.jpg",
+    "image_hero": "/img/nm_hero.jpg",
+    "musician": ["Various Artists"],
+    "similar_games": ["Temtem", "Cassette Beast", "Pokemon Violet"],
+    "games_by_developers": ["Nexomon: Extinction"],
+    "genre": ["Creature-Collector", "Adventure", "Role-playing"],
+    "vibe": ["Turn-Base", "Story-driven", "Indie"],
+    "price": 10,
+    "reviews": 3.5,
+    "multiplayer": "no",
+    "competitive": "no",
+    "developer_site": "http://nexomon.com/",
+    "sold_where": [
+      "Gamestop",
+      "Walmart",
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Amazon",
+      "Steam",
+      "Nintendo Eshop"
+    ],
+    "rating": "E",
+    "awards": ["None"],
+    "accessibilities": ["None"],
+    "warnings": ["None"],
+    "game_specs": ["CPU: 2 Ghz", "RAM: 4GB", "GPU: Open GL 3.2+ Compliant"],
+    "platform": [
+      "/img/pc.png",
+      "/img/xbox.png",
+      "/img/playstation.png",
+      "/img/switch.png",
+      "/img/mobile.png"
+    ],
+    "memory_usage": "3GB"
+  },
+  {
+    "title": "Cassette Beast",
+    "description": "Welcome to New Wirral a remote island inhabited by strange creatures you've only dreamed of nightmares you hopefully haven't and a cast of brave folks who use cassette tapes to transform for battle. To find a way home you'll need to explore every inch of the island and record monsters to your trusty cassette tapes to gain their abilities!",
+    "image_cover": "/img/cb.jpg",
+    "image_hero": "/img/cb_hero.jpg",
+    "musician": ["Joel Baylis"],
+    "similar_games": ["Temtem", "Nexomon", "Pokemon Violet"],
+    "games_by_developers": ["Moonstone Island", "Post Trauma", "Pizza Possum"],
+    "genre": ["Creature-Collector", "Adventure", "Role-playing"],
+    "vibe": ["Turn-Base", "Story-driven", "Immersive"],
+    "price": 20,
+    "reviews": 4,
+    "multiplayer": "Online",
+    "competitive": "no",
+    "developer_site": "https://www.cassettebeasts.com/",
+    "sold_where": ["Microsoft EShop", "Steam", "Nintendo Eshop"],
+    "rating": "E",
+    "awards": ["None"],
+    "accessibilities": ["None"],
+    "warnings": ["None"],
+    "game_specs": [
+      "CPU: AMD Ryzen™ 5",
+      "RAM: 8GB",
+      "GPU: NVIDIA GTX 970",
+      "Frame Rate: 60FPS"
+    ],
+    "platform": ["/img/pc.png", "/img/xbox.png", "/img/switch.png"],
+    "memory_usage": "2GB"
+  },
+  {
+    "title": "Stardew Valley",
+    "description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town's most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!",
+    "image_cover": "/img/sv.jpg",
+    "image_hero": "/img/sv_hero.jpg",
+    "musician": ["Eric Barone"],
+    "similar_games": ["Sims 4", "Coral Island", "Unpacking"],
+    "games_by_developers": ["None"],
+    "genre": ["Simulation", "Role-playing"],
+    "vibe": ["Cozy", "Life-Sim", "Indie", "Dating Sim", "Casual"],
+    "price": 15,
+    "reviews": 5,
+    "multiplayer": "Online",
+    "competitive": "no",
+    "developer_site": "https://www.stardewvalley.net/",
+    "sold_where": [
+      "Gamestop",
+      "Walmart",
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Amazon",
+      "Steam",
+      "Nintendo Eshop"
+    ],
+    "rating": "E",
+    "awards": ["None"],
+    "accessibilities": ["None"],
+    "warnings": ["None"],
+    "game_specs": ["CPU: 2 Ghz", "RAM: 2GB", "GPU: 256 mb video memory"],
+    "platform": [
+      "/img/pc.png",
+      "/img/xbox.png",
+      "/img/playstation.png",
+      "/img/switch.png"
+    ],
+    "memory_usage": "500MB"
+  },
+  {
+    "title": "Coral Island",
+    "description": "Be who you want and create the idyllic farm of your dreams, where you’ll tend crops, nurture animals, and build a bond with the natural world around you. Help revitalize the nearby town and its surrounding coral reefs, and forge relationships with a vibrant community of more than 70 fellow people who call Coral Island home.",
+    "image_cover": "/img/ci.jpg",
+    "image_hero": "/img/ci_hero.jpg",
+    "musician": ["Yugo"],
+    "similar_games": ["Sims 4", "Stardew Valley", "Unpacking"],
+    "games_by_developers": ["None"],
+    "genre": ["Simulation", "Role-playing"],
+    "vibe": ["Cozy", "Life-Sim", "Indie", "Dating Sim", "Casual"],
+    "price": 30,
+    "reviews": 3.2,
+    "multiplayer": "Local and Online",
+    "competitive": "no",
+    "developer_site": "https://blog.stairwaygames.com/coral-island",
+    "sold_where": ["Microsoft EShop", "Playstation Eshop", "Steam"],
+    "rating": "E",
+    "awards": ["023 Steam Awards Game Awards “Sit Back and Relax"],
+    "accessibilities": [
+      "Settings Options for Colorblindness",
+      "Settings for Dyslexia"
+    ],
+    "warnings": ["None"],
+    "game_specs": [
+      "CPU: Intel i7 Processor/Ryzen 1700",
+      "RAM: 16GB",
+      "GPU: Nvidia GeForce GTX960",
+      "Frame Rate: 42FPS"
+    ],
+    "platform": ["/img/pc.png", "/img/xbox.png", "/img/playstation.png"],
+    "memory_usage": "8GB"
+  },
+  {
+    "title": "Sims",
+    "description": "Unleash your imagination and create a unique world of Sims that’s an expression of you. Download for free, and customize every detail from Sims to homes and much more. Choose how Sims look, act, and dress, then decide how they’ll live out each day. Design and build incredible homes for every family, then decorate with your favorite furnishings and décor.",
+    "image_cover": "/img/s4.jpg",
+    "image_hero": "/img/s4_hero.jpg",
+    "musician": ["Ilan Eshkeri"],
+    "similar_games": ["Coral Island", "Stardew Valley", "Unpacking"],
+    "games_by_developers": ["BattleField", "Apex Legends", "It Takes Two"],
+    "genre": ["Simulation", "Role-playing"],
+    "vibe": ["Cozy", "Life-Sim", "Immersive", "Dating Sim", "Casual"],
+    "price": 0,
+    "reviews": 4,
+    "multiplayer": "Online",
+    "competitive": "no",
+    "developer_site": "https://www.ea.com/games/the-sims/the-sims-4",
+    "sold_where": ["Microsoft EShop", "Playstation Eshop", "Steam"],
+    "rating": "T",
+    "awards": [
+      "Game of the Year",
+      "Outstanding Achievement in Game Design",
+      "Outstanding Achievement in Game Play Engineering"
+    ],
+    "accessibilities": ["None"],
+    "warnings": ["None"],
+    "game_specs": [
+      "CPU: Intel core i5 (4 cores)",
+      "RAM: 8GB",
+      "GPU: NVIDIA GTX 650",
+      "Frame Rate: 56FPS"
+    ],
+    "platform": ["/img/pc.png", "/img/xbox.png", "/img/playstation.png"],
+    "memory_usage": "51GB"
+  },
+  {
+    "title": "Unpacking",
+    "description": "Unpacking is a zen game about the familiar experience of pulling possessions out of boxes and fitting them into a new home. Part block-fitting puzzle, part home decoration, you are invited to create a satisfying living space while learning clues about the life you’re unpacking. Over the course of eight house moves, you are given a chance to experience a sense of intimacy with a character you never see and a story you’re never told.",
+    "image_cover": "/img/up.jpg",
+    "image_hero": "/img/up_hero.jpg",
+    "musician": ["Jeff van Dyck"],
+    "similar_games": ["Coral Island", "Stardew Valley", "Sims 4"],
+    "games_by_developers": ["Assault Android Cactus+"],
+    "genre": ["Simulation", "Puzzle"],
+    "vibe": ["Cozy", "Story-driven", "Immersive", "Casual"],
+    "price": 20,
+    "reviews": 4.5,
+    "multiplayer": "no",
+    "competitive": "no",
+    "developer_site": "https://www.unpackinggame.com/",
+    "sold_where": [
+      "Microsoft EShop",
+      "Playstation Eshop",
+      "Steam",
+      "Target",
+      "Amazon",
+      "Nintendo Eshop"
+    ],
+    "rating": "E",
+    "awards": [
+      "2022 Winner BAFTA Games Award EE Game of the Year",
+      "2022 Winner BAFTA Games Award Best Narrative"
+    ],
+    "accessibilities": ["None"],
+    "warnings": ["None"],
+    "game_specs": ["None"],
+    "platform": [
+      "/img/pc.png",
+      "/img/xbox.png",
+      "/img/playstation.png",
+      "/img/switch.png"
+    ],
+    "memory_usage": "1GB"
+  },
+  {
+    "title": "Potionomics",
+    "description": "You've inherited your uncle's potion shop—and a huge debt. Better get brewing! Customize your store, hire heroes to gather ingredients, befriend (or romance) fellow vendors to learn new haggling strategies, and go head-to-head with competitors in this narrative-driven, deck-building shop simulator.",
+    "image_cover": "/img/pn.jpg",
+    "image_hero": "/img/pn_hero.jpg",
+    "musician": ["Greg Nicolett"],
+    "similar_games": ["Coral Island", "Stardew Valley", "Sims 4"],
+    "games_by_developers": ["None"],
+    "genre": ["Simulation", "Deckbuilding"],
+    "vibe": ["Cozy", "Story-driven", "Life-Sim", "Management", "Indie"],
+    "price": 20,
+    "reviews": 4.5,
+    "multiplayer": "no",
+    "competitive": "no",
+    "developer_site": "https://potionomics.com/",
+    "sold_where": ["Steam"],
+    "rating": "E",
+    "awards": ["Audience Award Independent Game Festival"],
+    "accessibilities": ["None"],
+    "warnings": ["None"],
+    "game_specs": [
+      "CPU: Quad Core Processor",
+      "RAM: 16GB",
+      "GPU: GeForce GTX 1060 6GB"
+    ],
+    "platform": ["/img/pc.png"],
+    "memory_usage": "7GB"
   }
 ]
