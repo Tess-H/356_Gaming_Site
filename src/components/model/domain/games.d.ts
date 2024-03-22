@@ -1,5 +1,5 @@
 //TODO: Review json and make sure it looks good and got what we need
-export interface Games {
+export interface Game {
   title: string; //name of game
   description: string;
   imageCover: string;
@@ -20,6 +20,9 @@ export interface Games {
   accessibilities: string[];
   warnings: string[];
   gameSpecs: string[];
-  platform: string[]; //platform game is playable on like xbox, pc, etc.
+  platforms: string[]; //platform game is playable on like xbox, pc, etc.
   memoryUsage: string;
+}
+export interface GameCardProps {
+  game: Game;
 }

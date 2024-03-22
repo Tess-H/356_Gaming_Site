@@ -1,4 +1,4 @@
-import { Games } from "../domain/games";
+import { Game } from "../domain/games";
 import gamesJson from "../games.json";
 
 export const gamesMap = new Map<string, string>();
@@ -9,7 +9,7 @@ gamesJson.forEach((gamesJson: any) => {
   gamesMap.set(gamesJson.title, gamesJson.description);
 });
 
-export const games: Games[] = gamesJson.map((gamesJson: any): Games => {
+export const games: Game[] = gamesJson.map((gamesJson: any): Game => {
   //TODO: other stuff to parese if we need it? Note sure how we want to organize things
 
   return {
@@ -33,7 +33,11 @@ export const games: Games[] = gamesJson.map((gamesJson: any): Games => {
     accessibilities: gamesJson.accessibilities,
     warnings: gamesJson.warnings,
     gameSpecs: gamesJson.gameSpecs,
-    platform: gamesJson.platform,
+    platforms: gamesJson.platform,
     memoryUsage: gamesJson.memoryUsage,
   };
 });
+
+export interface GameCardProps {
+  game: Game;
+}
