@@ -5,23 +5,27 @@ import './GameCard.css';
 const GameCard: React.FC<GameCardProps> = ({ game }) => {
   return (
     <div className="game-card">
-      {/* Front of the Card */}
-      <div className="card-front" style={{ backgroundImage: `url(${game.imageCover})` }}>
-        <div className="game-overlay"> {/* Overlay for better text visibility */}
-          <h3 className="game-title">{game.title}</h3>
-          <div className="game-platforms">
-            {game.platforms.map((platform) => (
-              <span key={platform}>{/* Platform icon goes here */}</span>
-            ))}
-          </div>
-        </div>
+      <div className="game-art">
+        <img className="game-cover" src={game.imageCover}></img>
+        {/* Priority icons go here */}
       </div>
 
-      {/* Back of the Card */}
-      <div className="card-back">
-        <p className="game-genre">{game.genre}</p>
+      <div className="game-info">
+        {/*<h4 className="game-title">{game.title}</h4>*/}
+
+        <div className="game-platforms">
+          {game.platforms.map((platform) => (
+            <span key={platform}>{/* Platform icon goes here */}</span>
+          ))}
+        </div>
+
+        <p className="game-genre-tags">{game.genre?.map((genreTag) => (
+          <span key={genreTag}>{genreTag}</span>
+        ))}</p>
+
         <p className="game-price">{game.price}</p>
         <p className="game-description">{game.description}</p>
+
         <button className="game-info-button" 
           // onClick={/* Modal trigger function */}
         >
