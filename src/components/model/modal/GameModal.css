@@ -1,0 +1,42 @@
+/* GameModal.css */
+
+.game-modal-overlay {
+    position: fixed; /* or `absolute` if you want it to be within a positioned parent */
+    top: 0;
+    left: 0;
+    right: 0; /* Ensuring it covers the full viewport */
+    bottom: 0;
+    width: 100vw; /* Viewport width */
+    height: 100vh; /* Viewport height */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to make sure it covers other content */
+  }
+  
+  .game-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80vw; /* Use viewport width for sizing */
+    max-width: 80vw; /* This ensures the modal doesn't exceed the viewport width */
+    height: 80vh; /* Use viewport height for sizing */
+    overflow-y: auto; /* In case content is too long */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for better focus */
+    position: relative; /* For the positioning of the close button if needed */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stacks children vertically */
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .imageHero {
+    max-width: 100%; /* Ensures the image is not wider than its container */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures the image is fully visible within the frame */
+  }

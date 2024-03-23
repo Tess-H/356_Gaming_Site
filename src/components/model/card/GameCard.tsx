@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GameCardProps } from '../domain/games';
 import './GameCard.css';
+import GameModal from '../modal/GameModal';
 
 const GameCard: React.FC<GameCardProps> = ({ game }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => setModalOpen(!isModalOpen);
+
   return (
     <div className="game-card">
       <div className="game-art">
@@ -27,11 +32,13 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
         <p className="game-description">{game.description}</p>
 
         <button className="game-info-button" 
-          // onClick={/* Modal trigger function */}
+          onClick={toggleModal}
+          
         >
           Game Info
         </button>
       </div>
+      <GameModal game={game} isOpen={isModalOpen} onClose={toggleModal} />
     </div>
   );
 };
