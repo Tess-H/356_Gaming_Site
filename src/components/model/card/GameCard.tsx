@@ -3,12 +3,10 @@ import { GameCardProps } from '../domain/games';
 import './GameCard.css';
 
 const GameCard: React.FC<GameCardProps> = ({ game }) => {
-    // 
-    const prepend = "../../../public/";
   return (
     <div className="game-card">
       {/* Front of the Card */}
-      <div className="card-front" style={{ backgroundImage: `url(${prepend}${game.imageHero})` }}>
+      <div className="card-front" style={{ backgroundImage: `url(${game.imageCover})` }}>
         <div className="game-overlay"> {/* Overlay for better text visibility */}
           <h3 className="game-title">{game.title}</h3>
           <div className="game-platforms">
