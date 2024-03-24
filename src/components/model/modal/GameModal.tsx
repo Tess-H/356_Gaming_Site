@@ -17,32 +17,41 @@ const GameModal: React.FC<GameModalProps> = ({ game, isOpen, onClose }) => {
   const modalContent = (
     <div className="game-modal-overlay" onClick={onClose}>
       <div className="game-modal-content" onClick={(e) => e.stopPropagation()}>
+        <img className="game-heroimg" src={game.imageHero} alt={game.title} />
+
         <h2>{game.title}</h2>
-        <div className="imageHero">
-        <img src={game.imageHero} alt={game.title} />
-        </div>
         <p>{game.description}</p>
         <p>Rated {game.rating}</p>
-        <p>${game.price}.99</p>
+        <p>${game.price}</p>
+
         <ul>
           Accesibility Features:
           {game.accessibilities.map((accessibility, index) => (
             <li key={index}>{accessibility}</li>
           ))}
         </ul>
+
         <ul>
           Game Spec Requirements:
           {game.gameSpecs.map((specs, index) => (
             <li key={index}>{specs}</li>
           ))}
         </ul>
-        <div style={{ display: "flex", flexDirection: "row" }}>
+
+        <div className="game-genre-tags">
+          {/* TODO Tag click event */}
+          <div className="game-genre-tags-scroll">{game.genre?.map((genreTag) => (
+            <span key={genreTag}>{genreTag}</span>
+          ))}</div>
+        </div>
+
+        <div class="game-platforms">
           {game.platforms.map((platform, index) => (
             <img
               key={index}
-              src={platform}
-              alt={platform.toLowerCase()}
-              style={{ width: "50px", height: "50px" }}
+              src={`img/${platform.toLowerCase()}.png`}
+              alt={platform}
+              title={platform}
             />
           ))}
         </div>

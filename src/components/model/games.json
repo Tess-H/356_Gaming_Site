@@ -36,7 +36,7 @@
     "accessibilities": ["Subtitles for Deafness"],
     "warnings": ["None"],
     "gameSpecs": ["Frame Rate: 30fps"],
-    "platform": ["img/switch.png"],
+    "platform": ["Switch"],
     "memoryUsage": "16.3GB"
   },
   {
@@ -74,7 +74,7 @@
     "accessibilities": ["Subtitles for Deafness"],
     "warnings": ["None"],
     "gameSpecs": ["Frame Rate: 30fps"],
-    "platform": ["img/switch.png"],
+    "platform": ["Switch"],
     "memoryUsage": "13.4GB"
   },
   {
@@ -114,7 +114,7 @@
       "GPU: Nvidia GeForce GTX 1060 6GB",
       "Frame Rate: 60FPS"
     ],
-    "platform": ["img/pc.png", "img/mobile.png"],
+    "platform": ["PC", "Android", "iOS"],
     "memoryUsage": "8-30GB"
   },
   {
@@ -163,10 +163,10 @@
       "Frame Rate: 60FPS"
     ],
     "platform": [
-      "img/pc.png",
-      "img/xbox.png",
-      "img/playstation.png",
-      "img/switch.png"
+      "PC",
+      "Xbox",
+      "PlayStation",
+      "Switch"
     ],
     "memoryUsage": "28GB"
   },
@@ -213,7 +213,7 @@
       "GPU: NVIDIA® GeForce® GTX 670 / NVIDIA® GeForce® GTX 1650 ",
       "Frame Rate: 60FPS"
     ],
-    "platform": ["img/pc.png", "img/xbox.png", "img/playstation.png"],
+    "platform": ["PC", "Xbox", "PlayStation"],
     "memoryUsage": "175GB"
   },
   {
@@ -262,7 +262,7 @@
       "GPU: NVIDIA GeForce® GTX 1050",
       "Frame Rate: 60FPS"
     ],
-    "platform": ["img/pc.png", "img/xbox.png"],
+    "platform": ["PC", "Xbox"],
     "memoryUsage": "42GB"
   },
   {
@@ -311,10 +311,10 @@
       "Frame Rate: 60FPS"
     ],
     "platform": [
-      "img/pc.png",
-      "img/xbox.png",
-      "img/playstation.png",
-      "img/switch.png"
+      "PC",
+      "Xbox",
+      "PlayStation",
+      "Switch"
     ],
     "memoryUsage": "75GB"
   },
@@ -351,7 +351,7 @@
       "GPU:  Nvidia Geforce GTX 650",
       "Frame Rate: 60FPS"
     ],
-    "platform": ["img/pc.png", "img/xbox.png", "img/playstation.png"],
+    "platform": ["PC", "Xbox", "PlayStation"],
     "memoryUsage": "25GB"
   },
   {
@@ -395,7 +395,7 @@
       "GPU: NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8 GB",
       "Frame Rate: 60FPS"
     ],
-    "platform": ["img/pc.png", "img/xbox.png", "img/playstation.png"],
+    "platform": ["PC", "Xbox", "PlayStation"],
     "memoryUsage": "60GB"
   },
   {
@@ -440,7 +440,7 @@
       "GPU: RTX2070",
       "Frame Rate: 60FPS"
     ],
-    "platform": ["img/pc.png", "img/xbox.png", "img/playstation.png"],
+    "platform": ["PC", "Xbox", "PlayStation"],
     "memoryUsage": "155GB"
   },
   {
@@ -483,7 +483,7 @@
       "GPU: AMD Radeon RX 6500 XT 4GB",
       "Frame Rate: 60FPS"
     ],
-    "platform": ["img/pc.png", "img/xbox.png", "img/playstation.png"],
+    "platform": ["PC", "Xbox", "PlayStation"],
     "memoryUsage": "50GB"
   },
   {
@@ -525,10 +525,10 @@
       "Frame Rate: 60FPS"
     ],
     "platform": [
-      "img/pc.png",
-      "img/xbox.png",
-      "img/playstation.png",
-      "img/switch.png"
+      "PC",
+      "Xbox",
+      "PlayStation",
+      "Switch"
     ],
     "memoryUsage": "50GB"
   },
@@ -571,10 +571,10 @@
       "Frame Rate: 60FPS"
     ],
     "platform": [
-      "img/pc.png",
-      "img/xbox.png",
-      "img/playstation.png",
-      "img/switch.png"
+      "PC",
+      "Xbox",
+      "PlayStation",
+      "Switch"
     ],
     "memoryUsage": "3.5GB"
   },
@@ -606,7 +606,7 @@
     "accessibilities": ["None"],
     "warnings": ["None"],
     "gameSpecs": ["None"],
-    "platform": ["img/switch.png"],
+    "platform": ["Switch"],
     "memoryUsage": "3.3GB"
   },
   {
@@ -648,10 +648,10 @@
       "Frame Rate: 120FPS"
     ],
     "platform": [
-      "img/pc.png",
-      "img/xbox.png",
-      "img/playstation.png",
-      "img/switch.png"
+      "PC",
+      "Xbox",
+      "PlayStation",
+      "Switch"
     ],
     "memoryUsage": "20GB"
   },
@@ -701,10 +701,10 @@
       "Frame Rate: 60FPS"
     ],
     "platform": [
-      "img/pc.png",
-      "img/xbox.png",
-      "img/playstation.png",
-      "img/switch.png"
+      "PC",
+      "Xbox",
+      "PlayStation",
+      "Switch"
     ],
     "memoryUsage": "6GB"
   },
@@ -745,7 +745,7 @@
     ],
     "warnings": ["Seizures"],
     "gameSpecs": ["None"],
-    "platform": ["img/switch.png"],
+    "platform": ["Switch"],
     "memoryUsage": "6GB"
   },
   {
@@ -786,10 +786,10 @@
       "Frame Rate: 60FPS"
     ],
     "platform": [
-      "img/pc.png",
-      "img/xbox.png",
-      "img/playstation.png",
-      "img/switch.png"
+      "PC",
+      "Xbox",
+      "PlayStation",
+      "Switch"
     ],
     "memoryUsage": "5GB"
   },
@@ -823,11 +823,12 @@
     "warnings": ["None"],
     "gameSpecs": ["CPU: 2 Ghz", "RAM: 4GB", "GPU: Open GL 3.2+ Compliant"],
     "platform": [
-      "img/pc.png",
-      "img/xbox.png",
-      "img/playstation.png",
-      "img/switch.png",
-      "img/mobile.png"
+      "PC",
+      "Xbox",
+      "PlayStation",
+      "Switch",
+      "iOS",
+      "Android"
     ],
     "memoryUsage": "3GB"
   },
@@ -857,7 +858,7 @@
       "GPU: NVIDIA GTX 970",
       "Frame Rate: 60FPS"
     ],
-    "platform": ["img/pc.png", "img/xbox.png", "img/switch.png"],
+    "platform": ["PC", "Xbox", "Switch"],
     "memoryUsage": "2GB"
   },
   {
@@ -890,10 +891,10 @@
     "warnings": ["None"],
     "gameSpecs": ["CPU: 2 Ghz", "RAM: 2GB", "GPU: 256 mb video memory"],
     "platform": [
-      "img/pc.png",
-      "img/xbox.png",
-      "img/playstation.png",
-      "img/switch.png"
+      "PC",
+      "Xbox",
+      "PlayStation",
+      "Switch"
     ],
     "memoryUsage": "500MB"
   },
@@ -926,7 +927,7 @@
       "GPU: Nvidia GeForce GTX960",
       "Frame Rate: 42FPS"
     ],
-    "platform": ["img/pc.png", "img/xbox.png", "img/playstation.png"],
+    "platform": ["PC", "Xbox", "PlayStation"],
     "memoryUsage": "8GB"
   },
   {
@@ -959,7 +960,7 @@
       "GPU: NVIDIA GTX 650",
       "Frame Rate: 56FPS"
     ],
-    "platform": ["img/pc.png", "img/xbox.png", "img/playstation.png"],
+    "platform": ["PC", "Xbox", "PlayStation"],
     "memoryUsage": "51GB"
   },
   {
@@ -969,7 +970,7 @@
     "imageHero": "img/up_hero.jpg",
     "musician": ["Jeff van Dyck"],
     "similarGames": ["Coral Island", "Stardew Valley", "Sims 4"],
-    "gamesByDevelopers": ["Assault Android Cactus+"],
+    "gamesByDevelopers": ["Android"],
     "genre": ["Simulation", "Puzzle"],
     "vibe": ["Cozy", "Story-driven", "Immersive", "Casual"],
     "price": 20,
@@ -994,10 +995,10 @@
     "warnings": ["None"],
     "gameSpecs": ["None"],
     "platform": [
-      "img/pc.png",
-      "img/xbox.png",
-      "img/playstation.png",
-      "img/switch.png"
+      "PC",
+      "Xbox",
+      "PlayStation",
+      "Switch"
     ],
     "memoryUsage": "1GB"
   },
@@ -1026,7 +1027,7 @@
       "RAM: 16GB",
       "GPU: GeForce GTX 1060 6GB"
     ],
-    "platform": ["img/pc.png"],
+    "platform": ["PC"],
     "memoryUsage": "7GB"
   }
 ]

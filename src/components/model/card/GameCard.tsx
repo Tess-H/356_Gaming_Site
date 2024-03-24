@@ -11,31 +11,37 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
   return (
     <div className="game-card">
       <div className="game-art">
-        <img className="game-cover" src={game.imageCover}></img>
-        {/* Priority icons go here */}
+        <img className="game-cover" src={game.imageCover} onClick={toggleModal}></img>
+
+        <div className="game-platforms">
+          {/* TODO Platform click event */}
+          {game.platforms.map((platform, index) => (
+            <img
+              key={index}
+              src={`img/${platform.toLowerCase()}.png`}
+              alt={platform}
+              title={platform}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="game-info">
         {/*<h4 className="game-title">{game.title}</h4>*/}
 
-        <div className="game-platforms">
-          {game.platforms.map((platform) => (
-            <span key={platform}>{/* Platform icon goes here */}</span>
-          ))}
+        <div className="game-genre-tags">
+          {/* TODO Tag click event */}
+          <div className="game-genre-tags-scroll">{game.genre?.map((genreTag) => (
+            <span key={genreTag}>{genreTag}</span>
+          ))}</div>
         </div>
 
-        <p className="game-genre-tags">{game.genre?.map((genreTag) => (
-          <span key={genreTag}>{genreTag}</span>
-        ))}</p>
-
-        <p className="game-price">{game.price}</p>
         <p className="game-description">{game.description}</p>
 
-        <button className="game-info-button" 
-          onClick={toggleModal}
-          
-        >
-          Game Info
+        {/*<p className="game-price">${game.price}</p>*/}
+
+        <button className="game-info-button" onClick={toggleModal}>
+          Read More
         </button>
       </div>
       <GameModal game={game} isOpen={isModalOpen} onClose={toggleModal} />

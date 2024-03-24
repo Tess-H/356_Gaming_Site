@@ -9,13 +9,14 @@ interface GameCardsContainerProps {
 }
 
 const GameCardsContainer: React.FC<GameCardsContainerProps> = ({ games }) => {
-  return (
+  return (<>
     <div className="game-cards-container">
       {games.map((game) => (
         <GameCard key={game.title} game={game} />
       ))}
     </div>
-  );
+    <div className="game-cards-end"></div>
+  </>);
 };
 
 export default GameCardsContainer;
