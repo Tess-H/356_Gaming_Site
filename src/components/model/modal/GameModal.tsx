@@ -36,7 +36,7 @@ const GameModal: React.FC<GameModalProps> = ({ game, isOpen, onClose }) => {
           </div>
 
           <div className="game-info-right">
-            <div class="game-platforms">
+            <div className="game-platforms">
               {game.platforms.map((platform, index) => (
                 <img
                   key={index}
