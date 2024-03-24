@@ -33,10 +33,9 @@
 
 @media (max-width: 1150px) { .game-card { width: 22.6%; } }
 @media (max-width:  900px) { .game-card { width: 30%; } }
-@media (max-width:  710px) { .game-card { width: 44%; } }
-@media (max-width:  500px) { .game-card { width: 100%; }
-  .game-cards-container { justify-content: center; }
-}
+@media (max-width:  710px) { .game-card { width: 44%; }
+  .game-cards-container { justify-content: center; } }
+@media (max-width:  500px) { .game-card { width: 100%; } }
 
 .game-card:hover {
   transform: scale(1.1);
