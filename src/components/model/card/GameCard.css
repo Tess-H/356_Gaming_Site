@@ -1,12 +1,13 @@
 .game-cards-container {
-  columns: 5;
-  column-gap: 28px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .game-cards-end {
   position: relative;
-  height: 100px;
-  margin-top: -80px;
+  height: 140px;
+  margin-top: 40px;
   border-top: 1px solid #555;
 }
 
@@ -24,9 +25,17 @@
 
 .game-card {
   position: relative;
-  margin-bottom: 28px;
-  break-inside: avoid;
+  max-width: 250px;
+  width: 18%;
+  margin: 10px;
   transition: transform .3s, opacity .3s;
+}
+
+@media (max-width: 1150px) { .game-card { width: 22.6%; } }
+@media (max-width:  900px) { .game-card { width: 30%; } }
+@media (max-width:  710px) { .game-card { width: 44%; } }
+@media (max-width:  500px) { .game-card { width: 100%; }
+  .game-cards-container { justify-content: center; }
 }
 
 .game-card:hover {
@@ -59,6 +68,7 @@
   bottom: 10px;
   right: 10px;
   padding: 8px;
+  text-align: right;
   border-radius: 20px;
   background: rgba(0,0,0,.6);
   transition: background .3s;
@@ -172,71 +182,3 @@
 .game-info-button:focus-visible {
   outline: none;
 }
-
-/*.game-card {
-  perspective: 1000px;
-  position: relative;
-  width: 300px; / * Adjust as needed * /
-  height: 400px; / * Adjust as needed * /
-  margin: 10px;
-  transform-style: preserve-3d; / * Needed for the children to preserve 3D space * /
-}
-
-.card-front, .card-back {
-  backface-visibility: hidden;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.card-front {
-  transform: rotateY(0deg);
-  z-index: 2; / * Ensure front card is above the back card initially * /
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; / * Align the text to the bottom * /
-}
-
-.game-overlay {
-  background: rgba(0, 0, 0, 0.5); / * Dark overlay for better text readability * /
-  color: white;
-  width: 100%; / * Overlay should cover the whole card front * /
-  padding: 10px; / * Adjust as needed * /
-}
-
-.card-back {
-  transform: rotateY(-180deg);
-  z-index: 1; / * Ensure back card is below the front card initially * /
-  padding: 10px; / * Padding for back card content * /
-}
-
-.game-description {
-  max-height: 100px; / * Adjust to your preference * /
-  overflow-y: auto;
-  margin-bottom: 1em; / * Adjust as needed * /
-}
-
-/ * Adjust hover effects * /
-.game-card:hover .card-front {
-  transform: rotateY(180deg);
-}
-
-.game-card:hover .card-back {
-  transform: rotateY(0deg);
-  z-index: 3; / * Ensure back card comes above the front card on hover * /
-}
-
-.game-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-}
-*/
