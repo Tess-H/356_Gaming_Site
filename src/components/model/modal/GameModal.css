@@ -16,17 +16,16 @@
 }
 
 .game-modal-content {
-  background: #333;
-  border-radius: 8px;
-  width: 80vw; /* Use viewport width for sizing */
+  position: relative; /* For the positioning of the close button if needed */
   max-width: 80vw; /* This ensures the modal doesn't exceed the viewport width */
-  height: 80vh; /* Use viewport height for sizing */
+  width: 80vw; /* Use viewport width for sizing */
+  height: 90vh; /* Use viewport height for sizing */
+  color: var(--text-color);
+  background: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for better focus */
+  border-radius: 8px;
   overflow-y: auto;
   overscroll-behavior: contain;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for better focus */
-  position: relative; /* For the positioning of the close button if needed */
-  display: flex; /* Enables flexbox layout */
-  flex-direction: column; /* Stacks children vertically */
 }
 
 .close-button {
@@ -38,8 +37,49 @@
   width: 100%;
 }
 
+@media (min-width: 900px) {
+  .game-info-columns {
+    display: flex;
+  }
+  .game-info-left, .game-info-right {
+    margin-bottom: 28px;
+  }
+  .game-platforms {
+    text-align: right;
+  }
+}
+.game-info-left, .game-info-right {
+  margin: 16px 20px;
+}
+.game-info-left {
+  flex: 6;
+}
+.game-info-right {
+  flex: 4;
+}
+.game-title {
+  margin-bottom: 8px;
+}
+.game-desc {
+  margin-bottom: 8px;
+}
+
+.game-modal-content .game-genre-tags {
+  margin: -4px 0 4px -8px;
+}
+.game-modal-content .game-genre-tags span {
+  font-size: 14px;
+}
+
 .game-platforms img {
   margin: 4px;
   height: 32px;
   filter: invert(1);
+}
+
+.game-modal-content ul {
+  margin-bottom: 12px;
+}
+.game-modal-content ul li {
+  margin-left: 1.5em;
 }
