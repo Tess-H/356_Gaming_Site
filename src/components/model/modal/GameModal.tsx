@@ -19,50 +19,42 @@ const GameModal: React.FC<GameModalProps> = ({ game, isOpen, onClose }) => {
       <div className="game-modal-content" onClick={(e) => e.stopPropagation()}>
         <img className="game-heroimg" src={game.imageHero} alt={game.title} />
 
-        <div className="game-info-columns">
-          <div className="game-info-left">
-            <h2 className="game-title">{game.title}</h2>
+        <h2>{game.title}</h2>
+        <p>{game.description}</p>
+        <p>Rated {game.rating}</p>
+        <p>${game.price}</p>
 
-            <div className="game-genre-tags">
-              {/* TODO Tag click event */}
-              <div className="game-genre-tags-scroll">{game.genre?.map((genreTag) => (
-                <span key={genreTag}>{genreTag}</span>
-              ))}</div>
-            </div>
+        <ul>
+          Accesibility Features:
+          {game.accessibilities.map((accessibility, index) => (
+            <li key={index}>{accessibility}</li>
+          ))}
+        </ul>
 
-            <p className="game-desc">{game.description}</p>
-            <p className="game-rating">Rated {game.rating}</p>
-            <p className="game-price">{game.price? "$"+game.price : "Free to play"}</p>
-          </div>
+        <ul>
+          Game Spec Requirements:
+          {game.gameSpecs.map((specs, index) => (
+            <li key={index}>{specs}</li>
+          ))}
+        </ul>
 
-          <div className="game-info-right">
-            <div class="game-platforms">
-              {game.platforms.map((platform, index) => (
-                <img
-                  key={index}
-                  src={`img/${platform.toLowerCase()}.png`}
-                  alt={platform}
-                  title={platform}
-                />
-              ))}
-            </div>
-
-            <ul className="game-specs">
-              Game Spec Requirements:
-              {game.gameSpecs.map((specs, index) => (
-                <li key={index}>{specs}</li>
-              ))}
-            </ul>
-
-            <ul className="game-accessibility">
-              Accesibility Features:
-              {game.accessibilities.map((accessibility, index) => (
-                <li key={index}>{accessibility}</li>
-              ))}
-            </ul>
-          </div>
+        <div className="game-genre-tags">
+          {/* TODO Tag click event */}
+          <div className="game-genre-tags-scroll">{game.genre?.map((genreTag) => (
+            <span key={genreTag}>{genreTag}</span>
+          ))}</div>
         </div>
 
+        <div className="game-platforms">
+          {game.platforms.map((platform, index) => (
+            <img
+              key={index}
+              src={`img/${platform.toLowerCase()}.png`}
+              alt={platform}
+              title={platform}
+            />
+          ))}
+        </div>
         {/* Any remaining info we want to add */}
         <div className="close-button">
           <button onClick={onClose}>Close</button>
