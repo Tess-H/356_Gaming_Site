@@ -19,14 +19,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: light) {
+/*@media (prefers-color-scheme: light) {
   :root {
     --text-color: #213547;
     --background: #ffffff;
     --link-hover-color: #747bff;
     --button-bg: #f9f9f9;
   }
-}
+}*/
 
 body {
   display: flex;
