@@ -4,7 +4,7 @@ import GameCardsContainer from "./components/model/card/GameCardsContainer";
 import { games } from "./components/model/service/gamesService";
 
 function App() {
-  const searchInput = useRef(null);
+  const searchInput = useRef<HTMLInputElement>(null);
   const [isSearchOpen, setSearchOpen] = useState(false);
   const toggleSearch = () => {
     setSearchOpen(!isSearchOpen);
