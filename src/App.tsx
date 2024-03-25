@@ -4,6 +4,9 @@ import GameCardsContainer from "./components/model/card/GameCardsContainer";
 import { Game } from "./components/model/domain/games";
 import { games } from "./components/model/service/gamesService";
 
+type Filter = (game: Game) => Boolean;
+type FilterSet = { [id: string]: Filter; };
+
 function App() {
   const searchInput = useRef<HTMLInputElement>(null);
   const [isSearchOpen, setSearchOpen] = useState(false);
@@ -15,11 +18,18 @@ function App() {
     if (e.target === sidebarOverlay.current) setSidebarOpen(false);
   };
 
+  const searchRef = useRef("");
   const [searchString, setSearchString] = useState("");
-  const [gameFilterStack, _setGameFilterStack] = useState([]);
-  const gameFilter = (games: Game[]) => gameFilterStack
-    .reduce((a,f) => a.filter(f), games)
-    .filter(game => !searchString || game.title.toLowerCase().includes(searchString.toLowerCase()));
+  searchRef.current = searchString; // Needs ref to maintain state inside arrow function
+
+  const searchFilter: Filter = game => {
+    const searchString = searchRef.current;
+    return !searchString || game.title.toLowerCase().includes(searchString.toLowerCase());
+  };
+
+  const [gameFilterSet, _setGameFilter] = useState<FilterSet>({ searchFilter });
+  const filterGames = (games: Game[]) => Object.values(gameFilterSet)
+   .reduce((a,f) => a.filter(f), games);
 
   const toggleSearch = () => {
     setSearchOpen(!isSearchOpen);
@@ -54,7 +64,7 @@ function App() {
         </div>
       </header>
 
-      <GameCardsContainer games={gameFilter(games)} />
+      <GameCardsContainer games={filterGames(games)} />
 
       <div id="sidebar-overlay" ref={sidebarOverlay} className={isSidebarOpen? "show" : ""} onClick={sidebarOverlayClick}>
         <div id="sidebar-container">
