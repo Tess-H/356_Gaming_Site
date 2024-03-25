@@ -25,5 +25,7 @@ export interface Game {
 }
 export interface GameCardProps {
   game: Game;
-  starGame: (star: boolean) => void;
+  starred: boolean;
+  onToggleStarred: () => void;
+  onOpenModal: () => void;
 }

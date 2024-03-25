@@ -1,24 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GameCardProps } from '../domain/games';
 import './GameCard.css';
-import GameModal from '../modal/GameModal';
 
-const GameCard: React.FC<GameCardProps> = ({ game, starGame }) => {
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [isStarred, setStarred] = useState(false);
-
-  const toggleModal = () => setModalOpen(!isModalOpen);
-  const toggleStarred = () => {
-    starGame(!isStarred);
-    setStarred(!isStarred);
-  };
-
+const GameCard: React.FC<GameCardProps> = ({ game, starred, onToggleStarred, onOpenModal }) => {
   return (
-    <div className={"game-card" + (isStarred? " starred" : "")}>
+    <div className={"game-card" + (starred? " starred" : "")}>
       <div className="game-art">
-        <img className="game-cover" src={game.imageCover} onClick={toggleModal}></img>
+        <img className="game-cover" src={game.imageCover} onClick={onOpenModal}></img>
 
-        <div className="game-star-target" onClick={toggleStarred}>
+        <div className="game-star-target" onClick={onToggleStarred}>
           <div className="game-star material-symbols-outlined">star</div>
         </div>
 
@@ -49,11 +39,10 @@ const GameCard: React.FC<GameCardProps> = ({ game, starGame }) => {
 
         {/*<p className="game-price">${game.price}</p>*/}
 
-        <button className="game-info-button" onClick={toggleModal}>
+        <button className="game-info-button" onClick={onOpenModal}>
           Read More
         </button>
       </div>
-      <GameModal game={game} isOpen={isModalOpen} onClose={toggleModal} isStarred={isStarred} toggleStarred={toggleStarred} />
     </div>
   );
 };

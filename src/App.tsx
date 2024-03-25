@@ -1,6 +1,7 @@
-import { useState, useRef, FormEvent, KeyboardEvent, MouseEventHandler } from 'react';
+import { useState, useRef, FormEvent, KeyboardEvent, MouseEventHandler } from "react";
 import "./App.css";
 import GameCardsContainer from "./components/model/card/GameCardsContainer";
+import GameModal from "./components/model/modal/GameModal";
 import { Game } from "./components/model/domain/games";
 import { games } from "./components/model/service/gamesService";
 
@@ -23,14 +24,18 @@ function App() {
   const toggleStarredOnly = () => setStarredOnly(!starredOnly);
   starredRef.current = starredOnly;
 
-  const starredGamesRef = useRef(new Set());
-  const [starredGames, setStarredGames] = useState(new Set());
+  const starredGamesRef = useRef<Set<Game>>(new Set());
+  const [starredGames, setStarredGames] = useState<Set<Game>>(new Set());
   starredGamesRef.current = starredGames;
 
   const starGame = (game: Game) => (star: boolean) => setStarredGames(prev => {
     if (star) return new Set([...prev, game]);
     else return new Set([...prev].filter(g => g !== game));
   });
+  const toggleStarred = (game: Game) => () => {
+    const starredGames = starredGamesRef.current;
+    starGame(game)(!starredGames.has(game));
+  };
 
   const starredFilter: Filter = game => {
     const starredOnly = starredRef.current;
@@ -67,6 +72,14 @@ function App() {
     }
   };
 
+  const [modalGame, setModalGame] = useState<Game | null>(null);
+  const [isModalOpen, setModalOpen] = useState(false);
+  const toggleModal = () => setModalOpen(!isModalOpen);
+  const openModal = (game: Game) => () => {
+    setModalGame(game);
+    setModalOpen(true);
+  };
+
   return (
     <>
       <header>
@@ -84,7 +97,7 @@ function App() {
         </div>
       </header>
 
-      <GameCardsContainer games={filterGames(games)} starGame={starGame} />
+      <GameCardsContainer games={filterGames(games)} starredGames={starredGames} onToggleStarred={toggleStarred} onOpenModal={openModal} />
 
       <div id="sidebar-overlay" ref={sidebarOverlay} className={isSidebarOpen? "show" : ""} onClick={sidebarOverlayClick}>
         <div id="sidebar-container">
@@ -93,6 +106,8 @@ function App() {
           </div>
         </div>
       </div>
+
+      {modalGame? <GameModal game={modalGame} isOpen={isModalOpen} onClose={toggleModal} isStarred={starredGames.has(modalGame)} toggleStarred={toggleStarred(modalGame)} /> : null}
     </>
   );
 }

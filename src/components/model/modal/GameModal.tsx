@@ -1,5 +1,3 @@
-// GameModal.tsx
-
 import React from "react";
 import ReactDOM from "react-dom";
 import { Game } from "../domain/games";
