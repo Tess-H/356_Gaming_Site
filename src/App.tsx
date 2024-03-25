@@ -18,6 +18,26 @@ function App() {
     if (e.target === sidebarOverlay.current) setSidebarOpen(false);
   };
 
+  const starredRef = useRef(false);
+  const [starredOnly, setStarredOnly] = useState(false);
+  const toggleStarredOnly = () => setStarredOnly(!starredOnly);
+  starredRef.current = starredOnly;
+
+  const starredGamesRef = useRef(new Set());
+  const [starredGames, setStarredGames] = useState(new Set());
+  starredGamesRef.current = starredGames;
+
+  const starGame = (game: Game) => (star: boolean) => setStarredGames(prev => {
+    if (star) return new Set([...prev, game]);
+    else return new Set([...prev].filter(g => g !== game));
+  });
+
+  const starredFilter: Filter = game => {
+    const starredOnly = starredRef.current;
+    const starredGames = starredGamesRef.current;
+    return !starredOnly || starredGames.has(game);
+  };
+
   const searchRef = useRef("");
   const [searchString, setSearchString] = useState("");
   searchRef.current = searchString; // Needs ref to maintain state inside arrow function
@@ -27,7 +47,7 @@ function App() {
     return !searchString || game.title.toLowerCase().includes(searchString.toLowerCase());
   };
 
-  const [gameFilterSet, _setGameFilter] = useState<FilterSet>({ searchFilter });
+  const [gameFilterSet, _setGameFilter] = useState<FilterSet>({ searchFilter, starredFilter });
   const filterGames = (games: Game[]) => Object.values(gameFilterSet)
    .reduce((a,f) => a.filter(f), games);
 
@@ -64,11 +84,13 @@ function App() {
         </div>
       </header>
 
-      <GameCardsContainer games={filterGames(games)} />
+      <GameCardsContainer games={filterGames(games)} starGame={starGame} />
 
       <div id="sidebar-overlay" ref={sidebarOverlay} className={isSidebarOpen? "show" : ""} onClick={sidebarOverlayClick}>
         <div id="sidebar-container">
-          Filters...
+          <div id="starred-only-toggle" className={"sidebar-control-box sidebar-toggle" + (starredOnly? " on" : "")} onClick={toggleStarredOnly}>
+            Starred Only
+          </div>
         </div>
       </div>
     </>

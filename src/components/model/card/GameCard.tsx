@@ -3,12 +3,15 @@ import { GameCardProps } from '../domain/games';
 import './GameCard.css';
 import GameModal from '../modal/GameModal';
 
-const GameCard: React.FC<GameCardProps> = ({ game }) => {
+const GameCard: React.FC<GameCardProps> = ({ game, starGame }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [isStarred, setStarred] = useState(false);
 
   const toggleModal = () => setModalOpen(!isModalOpen);
-  const toggleStarred = () => setStarred(!isStarred);
+  const toggleStarred = () => {
+    starGame(!isStarred);
+    setStarred(!isStarred);
+  };
 
   return (
     <div className={"game-card" + (isStarred? " starred" : "")}>
