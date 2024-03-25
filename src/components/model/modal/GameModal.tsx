@@ -64,9 +64,7 @@ const GameModal: React.FC<GameModalProps> = ({ game, isOpen, onClose }) => {
         </div>
 
         {/* Any remaining info we want to add */}
-        <div className="close-button">
-          <button onClick={onClose}>Close</button>
-        </div>
+        <button className="close-button material-symbols-outlined" onClick={onClose}>close</button>
       </div>
     </div>
   );
