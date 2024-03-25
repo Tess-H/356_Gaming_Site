@@ -12,21 +12,26 @@ header {
   right: 0;
   width: 100%;
   height: 56px;
-  background: #333;
   text-align: left;
+  background: #333;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
   z-index: 500;
 }
 
-#menu-button {
+.header-button {
   display: inline-block;
   height: 56px;
   width: 56px;
   padding: 16px;
   cursor: pointer;
 }
+.header-button:hover {
+  background: #555;
+}
 
 header h1 {
   display: inline-block;
+  margin-left: 12px;
   vertical-align: top;
   font-size: 20px;
   line-height: 56px;
@@ -38,10 +43,40 @@ header h1 {
   right: 0;
   height: 56px;
 }
+
 #search-button {
-  display: inline-block;
+  margin-right: -35vw;
+  transition: margin-right .2s;
+}
+#search-button:has(+#search-collapse.show) {
+  margin-right: 0;
+}
+#search-collapse {
+  display: inline-flex;
   height: 56px;
-  width: 56px;
-  padding: 16px;
-  cursor: pointer;
+  width: 35vw;
+  vertical-align: top;
+  border-right: 1px solid #555;
+  transform-origin: right center;
+  transform: scaleX(0);
+  transition: transform .2s;
+}
+#search-collapse.show {
+  transform: scaleX(1);
+}
+
+#search-input {
+  display: inline-block;
+  vertical-align: top;
+  margin: 14px 0 10px;
+  padding: 4px;
+  height: 28px;
+  flex: 1;
+  font-size: 16px;
+  border: none;
+  color: var(--text-color);
+  background: transparent;
+  border-bottom: 2px solid #555;
+  outline-color: #555;
+  z-index: 1;
 }
