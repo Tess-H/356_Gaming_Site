@@ -22,7 +22,9 @@ function App() {
             <input id="search-input" ref={searchInput} type="search" placeholder="Search" />
             <span id="search-go" className="material-symbols-outlined header-button">send</span>
           </div>
-          <span id="random-button" className="material-symbols-outlined header-button">casino</span>
+          <span id="random-button" className="header-button">
+            <span id="random-button-icon" className="material-symbols-outlined">casino</span>
+          </span>
         </div>
       </header>
       <GameCardsContainer games={games} />

@@ -80,3 +80,15 @@ header h1 {
   outline-color: #555;
   z-index: 1;
 }
+
+#random-button-icon {
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+}
+#random-button:hover #random-button-icon {
+  animation-name: spin-dice;
+}
+@keyframes spin-dice {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
