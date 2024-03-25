@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import "./App.css";
 import GameCardsContainer from "./components/model/card/GameCardsContainer";
 import { games } from "./components/model/service/gamesService";
