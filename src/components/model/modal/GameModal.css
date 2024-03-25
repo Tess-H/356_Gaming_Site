@@ -48,6 +48,10 @@
   background: rgba(0,0,0,.5);
   border-radius: 6px;
   cursor: pointer;
+  transition: background .1s;
+}
+.game-star-button:hover {
+  background: rgba(0,0,0,.7);
 }
 .game-star-button .game-star-icon {
   vertical-align: top;
