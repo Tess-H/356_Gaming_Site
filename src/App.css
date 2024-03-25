@@ -1,6 +1,47 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 72px 2em 2em;
   text-align: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 56px;
+  background: #333;
+  text-align: left;
+  z-index: 500;
+}
+
+#menu-button {
+  display: inline-block;
+  height: 56px;
+  width: 56px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+header h1 {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 20px;
+  line-height: 56px;
+}
+
+#search-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 56px;
+}
+#search-button {
+  display: inline-block;
+  height: 56px;
+  width: 56px;
+  padding: 16px;
+  cursor: pointer;
 }
