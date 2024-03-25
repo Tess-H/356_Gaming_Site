@@ -5,13 +5,19 @@ import GameModal from '../modal/GameModal';
 
 const GameCard: React.FC<GameCardProps> = ({ game }) => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [isStarred, setStarred] = useState(false);
 
   const toggleModal = () => setModalOpen(!isModalOpen);
+  const toggleStarred = () => setStarred(!isStarred);
 
   return (
-    <div className="game-card">
+    <div className={"game-card" + (isStarred? " starred" : "")}>
       <div className="game-art">
         <img className="game-cover" src={game.imageCover} onClick={toggleModal}></img>
+
+        <div className="game-star-target" onClick={toggleStarred}>
+          <div className="game-star material-symbols-outlined">star</div>
+        </div>
 
         <div className="game-platforms">
           {/* TODO Platform click event */}
@@ -44,7 +50,7 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
           Read More
         </button>
       </div>
-      <GameModal game={game} isOpen={isModalOpen} onClose={toggleModal} />
+      <GameModal game={game} isOpen={isModalOpen} onClose={toggleModal} isStarred={isStarred} toggleStarred={toggleStarred} />
     </div>
   );
 };

@@ -9,15 +9,28 @@ interface GameModalProps {
   game: Game;
   isOpen: boolean;
   onClose: () => void;
+  isStarred: boolean;
+  toggleStarred: () => void;
 }
 
-const GameModal: React.FC<GameModalProps> = ({ game, isOpen, onClose }) => {
+const GameModal: React.FC<GameModalProps> = ({ game, isOpen, onClose, isStarred, toggleStarred }) => {
   if (!isOpen) return null;
 
   const modalContent = (
     <div className="game-modal-overlay" onClick={onClose}>
       <div className="game-modal-content" onClick={(e) => e.stopPropagation()}>
-        <img className="game-heroimg" src={game.imageHero} alt={game.title} />
+        <div className="game-hero-container">
+          <img className="game-heroimg" src={game.imageHero} alt={game.title} />
+
+          <div className="game-star-target" onClick={toggleStarred}>
+            <div className={"game-star-button" + (isStarred? " starred" : "")}>
+              <span className="game-star-icon material-symbols-outlined">star</span>
+              {isStarred? "Starred" : "Star"}
+            </div>
+          </div>
+
+          <button className="close-button material-symbols-outlined" onClick={onClose}>close</button>
+        </div>
 
         <div className="game-info-columns">
           <div className="game-info-left">
@@ -64,7 +77,6 @@ const GameModal: React.FC<GameModalProps> = ({ game, isOpen, onClose }) => {
         </div>
 
         {/* Any remaining info we want to add */}
-        <button className="close-button material-symbols-outlined" onClick={onClose}>close</button>
       </div>
     </div>
   );
