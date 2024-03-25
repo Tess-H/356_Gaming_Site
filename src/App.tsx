@@ -1,4 +1,4 @@
-import { useState, useRef, FormEvent, KeyboardEvent } from 'react';
+import { useState, useRef, FormEvent, KeyboardEvent, MouseEventHandler } from 'react';
 import "./App.css";
 import GameCardsContainer from "./components/model/card/GameCardsContainer";
 import { Game } from "./components/model/domain/games";
@@ -7,6 +7,13 @@ import { games } from "./components/model/service/gamesService";
 function App() {
   const searchInput = useRef<HTMLInputElement>(null);
   const [isSearchOpen, setSearchOpen] = useState(false);
+
+  const sidebarOverlay = useRef<HTMLDivElement>(null);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
+  const sidebarOverlayClick: MouseEventHandler<HTMLDivElement> = e => {
+    if (e.target === sidebarOverlay.current) setSidebarOpen(false);
+  };
 
   const [searchString, setSearchString] = useState("");
   const [gameFilterStack, _setGameFilterStack] = useState([]);
@@ -22,7 +29,7 @@ function App() {
 
   const doSearchInput = (e: FormEvent<HTMLInputElement>) => setSearchString(e.currentTarget.value);
   const doSearchEscapeKey = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.code == "Escape") {
+    if (e.code === "Escape") {
       searchInput.current?.blur();
       setSearchOpen(false);
       setSearchString("");
@@ -33,7 +40,7 @@ function App() {
   return (
     <>
       <header>
-        <span id="menu-button" className="material-symbols-outlined header-button">menu</span>
+        <span id="menu-button" className="material-symbols-outlined header-button" onClick={toggleSidebar}>{isSidebarOpen? "arrow_back" : "menu"}</span>
         <h1>Game Search</h1>
         <div id="search-bar">
           <span id="search-button" className="material-symbols-outlined header-button" onClick={toggleSearch}>search</span>
@@ -48,6 +55,12 @@ function App() {
       </header>
 
       <GameCardsContainer games={gameFilter(games)} />
+
+      <div id="sidebar-overlay" ref={sidebarOverlay} className={isSidebarOpen? "show" : ""} onClick={sidebarOverlayClick}>
+        <div id="sidebar-container">
+          Filters...
+        </div>
+      </div>
     </>
   );
 }
