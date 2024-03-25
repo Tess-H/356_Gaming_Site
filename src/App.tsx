@@ -80,6 +80,11 @@ function App() {
     setModalOpen(true);
   };
 
+  const showRandomGame = () => {
+    const gameList = filterGames(games);
+    openModal(gameList[Math.floor(Math.random() * gameList.length)])();
+  };
+
   return (
     <>
       <header>
@@ -91,7 +96,7 @@ function App() {
             <input id="search-input" ref={searchInput} type="search" placeholder="Search" onInput={doSearchInput} onKeyDown={doSearchEscapeKey} />
             <span id="search-go" className="material-symbols-outlined header-button">send</span>
           </div>
-          <span id="random-button" className="header-button">
+          <span id="random-button" className="header-button" onClick={showRandomGame}>
             <span id="random-button-icon" className="material-symbols-outlined">casino</span>
           </span>
         </div>

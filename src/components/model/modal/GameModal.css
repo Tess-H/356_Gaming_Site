@@ -30,6 +30,8 @@
 
 .game-hero-container {
   position: relative;
+  user-select: none;
+  -webkit-user-select: none;
 }
 .game-heroimg {
   display: block;
