@@ -8,7 +8,7 @@ function App() {
   const [isSearchOpen, setSearchOpen] = useState(false);
   const toggleSearch = () => {
     setSearchOpen(!isSearchOpen);
-    searchInput.current?[!isSearchOpen? "focus" : "blur"]();
+    searchInput.current?.[!isSearchOpen? "focus" : "blur"]();
   };
 
   return (
