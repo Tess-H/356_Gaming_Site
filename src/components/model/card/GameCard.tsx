@@ -9,7 +9,7 @@ const GameCard: React.FC<GameCardProps> = ({ game, starred, onToggleStarred, onO
         <img className="game-cover" src={game.imageCover} onClick={onOpenModal}></img>
 
         <div className="game-star-target" onClick={onToggleStarred}>
-          <div className="game-star material-symbols-outlined">star</div>
+          <div className="game-star material-symbols-outlined"></div>
         </div>
 
         <div className="game-platforms">

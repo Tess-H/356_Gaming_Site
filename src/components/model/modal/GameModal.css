@@ -66,6 +66,20 @@
   color: #f6bd60;
   opacity: 1;
 }
+.game-star-button .game-star-icon::before {
+  content: "star";
+  background: linear-gradient(150deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 24px 72px;
+  background-position: top left;
+  transition: background-position .1s;
+}
+.game-star-button.starred .game-star-icon::before {
+  background-position: bottom left;
+}
 .close-button {
   position: absolute;
   display: block;

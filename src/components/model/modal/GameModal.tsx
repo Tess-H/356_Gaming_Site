@@ -22,7 +22,7 @@ const GameModal: React.FC<GameModalProps> = ({ game, isOpen, onClose, isStarred,
 
           <div className="game-star-target" onClick={toggleStarred}>
             <div className={"game-star-button" + (isStarred? " starred" : "")}>
-              <span className="game-star-icon material-symbols-outlined">star</span>
+              <span className="game-star-icon material-symbols-outlined"></span>
               {isStarred? "Starred" : "Star"}
             </div>
           </div>
