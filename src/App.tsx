@@ -90,14 +90,14 @@ function App() {
   return (
     <>
       <header>
-        <span id="menu-button" className="material-symbols-outlined header-button" onClick={toggleSidebar}>{isSidebarOpen? "arrow_back" : "menu"}</span>
+        <span id="menu-button" className={"material-symbols-outlined header-button" + (isSidebarOpen? " sidebar-open" : "")} onClick={toggleSidebar}></span>
         <audio id="one-up" ref={oneUpRef} src="./1up.mp3"></audio>
         <h1 onClick={() => oneUpRef.current?.play()}>Level Up+</h1>
         <div id="search-bar">
-          <span id="search-button" className="material-symbols-outlined header-button" onClick={toggleSearch}>search</span>
+          <span id="search-button" className="material-symbols-outlined header-button" onClick={toggleSearch}></span>
           <div id="search-collapse" className={isSearchOpen? "show" : ""}>
             <input id="search-input" ref={searchInput} type="search" placeholder="Search" onInput={doSearchInput} onKeyDown={doSearchEscapeKey} />
-            <span id="search-go" className="material-symbols-outlined header-button">send</span>
+            <span id="search-go" className="material-symbols-outlined header-button"></span>
           </div>
           <span id="random-button" className="header-button" onClick={showRandomGame}>
             <span id="random-button-icon" className="material-symbols-outlined"></span>

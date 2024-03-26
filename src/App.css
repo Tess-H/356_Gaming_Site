@@ -51,6 +51,24 @@ header h1:hover {
   background-position: bottom left;
 }
 
+#menu-button::before {
+  content: "menu";
+  background: linear-gradient(140deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 24px 72px;
+  background-position: top left;
+  transition: background-position .3s;
+}
+#menu-button:hover::before {
+  background-position: bottom left;
+}
+#menu-button.sidebar-open::before {
+  content: "arrow_back";
+}
+
 #search-bar {
   position: absolute;
   top: 0;
@@ -61,6 +79,20 @@ header h1:hover {
 #search-button {
   margin-right: -35vw;
   transition: margin-right .2s;
+}
+#search-button::before {
+  content: "search";
+  background: linear-gradient(140deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 24px 72px;
+  background-position: top left;
+  transition: background-position .3s;
+}
+#search-button:hover::before {
+  background-position: bottom left;
 }
 #search-button:has(+#search-collapse.show) {
   margin-right: 0;
@@ -93,6 +125,21 @@ header h1:hover {
   border-bottom: 2px solid #555;
   outline-color: #555;
   z-index: 1;
+}
+
+#search-go::before {
+  content: "send";
+  background: linear-gradient(140deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 24px 72px;
+  background-position: top left;
+  transition: background-position .3s;
+}
+#search-go:hover::before {
+  background-position: bottom left;
 }
 
 #random-button-icon {
