@@ -9,6 +9,8 @@ type Filter = (game: Game) => Boolean;
 type FilterSet = { [id: string]: Filter; };
 
 function App() {
+  const oneUpRef = useRef<HTMLAudioElement>(null);
+
   const searchInput = useRef<HTMLInputElement>(null);
   const [isSearchOpen, setSearchOpen] = useState(false);
 
@@ -89,7 +91,8 @@ function App() {
     <>
       <header>
         <span id="menu-button" className="material-symbols-outlined header-button" onClick={toggleSidebar}>{isSidebarOpen? "arrow_back" : "menu"}</span>
-        <h1>Game Search</h1>
+        <audio id="one-up" ref={oneUpRef} src="./1up.mp3"></audio>
+        <h1 onClick={() => oneUpRef.current?.play()}>Level Up+</h1>
         <div id="search-bar">
           <span id="search-button" className="material-symbols-outlined header-button" onClick={toggleSearch}>search</span>
           <div id="search-collapse" className={isSearchOpen? "show" : ""}>
@@ -97,7 +100,7 @@ function App() {
             <span id="search-go" className="material-symbols-outlined header-button">send</span>
           </div>
           <span id="random-button" className="header-button" onClick={showRandomGame}>
-            <span id="random-button-icon" className="material-symbols-outlined">casino</span>
+            <span id="random-button-icon" className="material-symbols-outlined"></span>
           </span>
         </div>
       </header>

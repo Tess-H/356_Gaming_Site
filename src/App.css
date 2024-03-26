@@ -38,6 +38,17 @@ header h1 {
   vertical-align: top;
   font-size: 20px;
   line-height: 56px;
+  background: linear-gradient(150deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100px 168px;
+  background-position: top left;
+  transition: background-position .3s;
+}
+header h1:hover {
+  background-position: bottom left;
 }
 
 #search-bar {
@@ -85,10 +96,29 @@ header h1 {
 }
 
 #random-button-icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+
+  background: linear-gradient(140deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 24px 72px;
+  background-position: top left;
+  transition: background-position .5s;
+}
+#random-button:hover #random-button-icon {
+  background-position: bottom left;
+}
+#random-button-icon::before {
+  content: "casino";
+  display: inline-block;
   animation-duration: .5s;
   animation-iteration-count: 1;
 }
-#random-button:hover #random-button-icon {
+#random-button:hover #random-button-icon::before {
   animation-name: spin-dice;
 }
 @keyframes spin-dice {
@@ -148,11 +178,18 @@ header h1 {
   height: 24px;
   width: 48px;
   border-radius: 12px;
-  background: rgba(255,255,255,.15);
-  transition: background .1s;
+  /*background: rgba(255,255,255,.15);*/
+  /*transition: background .1s;*/
+  background: linear-gradient(150deg, #fff 0%, #fff 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background-size: 48px 100px;
+  background-position: top left;
+  transition: background-position .2s, opacity .2s;
+  opacity: .15;
 }
 .sidebar-toggle.on::before {
-  background: #669bbc;
+  /*background: #669bbc;*/
+  background-position: bottom left;
+  opacity: 1;
 }
 .sidebar-toggle::after {
   content: "";
@@ -163,7 +200,7 @@ header h1 {
   width: 18px;
   border-radius: 100%;
   background: rgba(255,255,255,.5);
-  transition: right .1s, background .1s;
+  transition: right .2s, background .2s;
 }
 .sidebar-toggle:hover::after {
   background: rgba(255,255,255,.7);
