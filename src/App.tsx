@@ -97,7 +97,7 @@ function App() {
         <div id="breadcrumbs" className={isSidebarOpen? "hide" : ""}>
           {starredOnly? <>
             <span className="bc-chevron material-symbols-outlined">chevron_right</span>
-            <span id="bc-starred-only" onClick={() => setStarredOnly(false)}>Starred Only<span className="bc-remove material-symbols-outlined">close</span></span>
+            <span id="bc-starred-only" onClick={() => setStarredOnly(false)}>Starred<span className="bc-remove material-symbols-outlined">close</span></span>
           </> : null}
         </div>
         <div id="search-bar">
