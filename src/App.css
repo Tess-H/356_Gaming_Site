@@ -278,6 +278,9 @@ header h1:hover {
 .sidebar-control-box:hover {
   background: #333;
 }
+.sidebar-button {
+  cursor: pointer;
+}
 .sidebar-toggle {
   position: relative;
   cursor: pointer;

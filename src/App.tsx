@@ -38,6 +38,7 @@ function App() {
     const starredGames = starredGamesRef.current;
     starGame(game)(!starredGames.has(game));
   };
+  const clearAllStars = () => setStarredGames(() => new Set());
 
   const starredFilter: Filter = game => {
     const starredOnly = starredRef.current;
@@ -117,6 +118,9 @@ function App() {
         <div id="sidebar-container">
           <div id="starred-only-toggle" className={"sidebar-control-box sidebar-toggle" + (starredOnly? " on" : "")} onClick={toggleStarredOnly}>
             Starred Only
+          </div>
+          <div id="clear-all-stars" className="sidebar-control-box sidebar-button" onClick={clearAllStars}>
+            Clear All Stars
           </div>
         </div>
       </div>
