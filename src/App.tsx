@@ -93,6 +93,12 @@ function App() {
         <span id="menu-button" className={"material-symbols-outlined header-button" + (isSidebarOpen? " sidebar-open" : "")} onClick={toggleSidebar}></span>
         <audio id="one-up" ref={oneUpRef} src="./1up.mp3"></audio>
         <h1 onClick={() => oneUpRef.current?.play()}>Level Up+</h1>
+        <div id="breadcrumbs" className={isSidebarOpen? "hide" : ""}>
+          {starredOnly? <>
+            <span className="bc-chevron material-symbols-outlined">chevron_right</span>
+            <span id="bc-starred-only" onClick={() => setStarredOnly(false)}>Starred Only<span className="bc-remove material-symbols-outlined">close</span></span>
+          </> : null}
+        </div>
         <div id="search-bar">
           <span id="search-button" className="material-symbols-outlined header-button" onClick={toggleSearch}></span>
           <div id="search-collapse" className={isSearchOpen? "show" : ""}>
