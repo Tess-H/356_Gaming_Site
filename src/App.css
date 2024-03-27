@@ -29,7 +29,7 @@ header {
   cursor: pointer;
 }
 .header-button:hover {
-  background: #555;
+  background: rgba(255,255,255,.15);
 }
 
 header h1 {
@@ -88,8 +88,8 @@ header h1:hover {
   position: absolute;
   inset: 0;
   border-radius: 4px;
-  background: linear-gradient(150deg, #fff 0%, #fff 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
-  background-size: 120px 140px;
+  background: linear-gradient(150deg, rgba(244,207,28,1) 0%, rgba(236,40,116,1) 100%);
+  background-size: 100% calc(1em + 10px);
   background-position: bottom left;
   transition: background-position .2s, opacity .2s;
   opacity: 0;
