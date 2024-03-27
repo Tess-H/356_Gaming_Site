@@ -9,6 +9,7 @@
   height: 140px;
   margin-top: 40px;
   border-top: 1px solid #555;
+  z-index: -1;
 }
 
 .game-cards-end::after {
