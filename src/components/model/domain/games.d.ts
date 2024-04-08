@@ -22,6 +22,7 @@ export interface Game {
   gameSpecs: string[];
   platforms: string[]; //platform game is playable on like xbox, pc, etc.
   memoryUsage: string;
+  sale?: number;
 }
 export interface GameCardProps {
   game: Game;

@@ -162,13 +162,9 @@
       "GPU: NVIDIA GeForce GTX 660 (2 GB)",
       "Frame Rate: 60FPS"
     ],
-    "platform": [
-      "PC",
-      "Xbox",
-      "PlayStation",
-      "Switch"
-    ],
-    "memoryUsage": "28GB"
+    "platform": ["PC", "Xbox", "PlayStation", "Switch"],
+    "memoryUsage": "28GB",
+    "sale": 40
   },
   {
     "title": "Call of Duty: Black Ops Cold War",
@@ -214,7 +210,8 @@
       "Frame Rate: 60FPS"
     ],
     "platform": ["PC", "Xbox", "PlayStation"],
-    "memoryUsage": "175GB"
+    "memoryUsage": "175GB",
+    "sale": 25
   },
   {
     "title": "Gears 5",
@@ -310,13 +307,9 @@
       "GPU:  NVIDIA GeForce GTX 680 2 GB.",
       "Frame Rate: 60FPS"
     ],
-    "platform": [
-      "PC",
-      "Xbox",
-      "PlayStation",
-      "Switch"
-    ],
-    "memoryUsage": "75GB"
+    "platform": ["PC", "Xbox", "PlayStation", "Switch"],
+    "memoryUsage": "75GB",
+    "sale": 30
   },
   {
     "title": "Metal Gear Rising: Revengeance",
@@ -352,7 +345,8 @@
       "Frame Rate: 60FPS"
     ],
     "platform": ["PC", "Xbox", "PlayStation"],
-    "memoryUsage": "25GB"
+    "memoryUsage": "25GB",
+    "sale": 45
   },
   {
     "title": "Elden Ring",
@@ -396,7 +390,8 @@
       "Frame Rate: 60FPS"
     ],
     "platform": ["PC", "Xbox", "PlayStation"],
-    "memoryUsage": "60GB"
+    "memoryUsage": "60GB",
+    "sale": 20
   },
   {
     "title": "Star Wars: Jedi Survivor",
@@ -441,7 +436,8 @@
       "Frame Rate: 60FPS"
     ],
     "platform": ["PC", "Xbox", "PlayStation"],
-    "memoryUsage": "155GB"
+    "memoryUsage": "155GB",
+    "sale": 25
   },
   {
     "title": "Lies of P",
@@ -524,13 +520,9 @@
       "GPU: Nvidia GTX 1070",
       "Frame Rate: 60FPS"
     ],
-    "platform": [
-      "PC",
-      "Xbox",
-      "PlayStation",
-      "Switch"
-    ],
-    "memoryUsage": "50GB"
+    "platform": ["PC", "Xbox", "PlayStation", "Switch"],
+    "memoryUsage": "50GB",
+    "sale": 60
   },
   {
     "title": "Sonic Origins",
@@ -570,13 +562,9 @@
       "GPU: NVIDIA GeForce GTX 770",
       "Frame Rate: 60FPS"
     ],
-    "platform": [
-      "PC",
-      "Xbox",
-      "PlayStation",
-      "Switch"
-    ],
-    "memoryUsage": "3.5GB"
+    "platform": ["PC", "Xbox", "PlayStation", "Switch"],
+    "memoryUsage": "3.5GB",
+    "sale": 55
   },
   {
     "title": "Super Mario Galaxy",
@@ -616,10 +604,7 @@
     "imageHero": "img/oww_hero.jpg",
     "musician": ["Gareth Coker"],
     "similarGames": ["Sonic Origins", "Super Mario Galaxy", "Rayman Legends"],
-    "gamesByDevelopers": [
-      "No Rest for the Wicked",
-      "Ori and the Blind Forest"
-    ],
+    "gamesByDevelopers": ["No Rest for the Wicked", "Ori and the Blind Forest"],
     "genre": ["Platformer", "Action-Adventure", "Puzzle"],
     "vibe": ["Fantasy", "Souls-like", "Story-driven"],
     "price": 30,
@@ -647,13 +632,9 @@
       "GPU: Nvidia GTX 970",
       "Frame Rate: 120FPS"
     ],
-    "platform": [
-      "PC",
-      "Xbox",
-      "PlayStation",
-      "Switch"
-    ],
-    "memoryUsage": "20GB"
+    "platform": ["PC", "Xbox", "PlayStation", "Switch"],
+    "memoryUsage": "20GB",
+    "sale": 10
   },
   {
     "title": "Rayman Legends",
@@ -700,12 +681,7 @@
       "GPU: NVidia GeForce 9600GT",
       "Frame Rate: 60FPS"
     ],
-    "platform": [
-      "PC",
-      "Xbox",
-      "PlayStation",
-      "Switch"
-    ],
+    "platform": ["PC", "Xbox", "PlayStation", "Switch"],
     "memoryUsage": "6GB"
   },
   {
@@ -785,12 +761,7 @@
       "GPU: Nvidia GTX 970",
       "Frame Rate: 60FPS"
     ],
-    "platform": [
-      "PC",
-      "Xbox",
-      "PlayStation",
-      "Switch"
-    ],
+    "platform": ["PC", "Xbox", "PlayStation", "Switch"],
     "memoryUsage": "5GB"
   },
   {
@@ -822,14 +793,7 @@
     "accessibilities": ["None"],
     "warnings": ["None"],
     "gameSpecs": ["CPU: 2 Ghz", "RAM: 4GB", "GPU: Open GL 3.2+ Compliant"],
-    "platform": [
-      "PC",
-      "Xbox",
-      "PlayStation",
-      "Switch",
-      "iOS",
-      "Android"
-    ],
+    "platform": ["PC", "Xbox", "PlayStation", "Switch", "iOS", "Android"],
     "memoryUsage": "3GB"
   },
   {
@@ -890,13 +854,9 @@
     "accessibilities": ["None"],
     "warnings": ["None"],
     "gameSpecs": ["CPU: 2 Ghz", "RAM: 2GB", "GPU: 256 mb video memory"],
-    "platform": [
-      "PC",
-      "Xbox",
-      "PlayStation",
-      "Switch"
-    ],
-    "memoryUsage": "500MB"
+    "platform": ["PC", "Xbox", "PlayStation", "Switch"],
+    "memoryUsage": "500MB",
+    "sale": 10
   },
   {
     "title": "Coral Island",
@@ -994,12 +954,7 @@
     "accessibilities": ["None"],
     "warnings": ["None"],
     "gameSpecs": ["None"],
-    "platform": [
-      "PC",
-      "Xbox",
-      "PlayStation",
-      "Switch"
-    ],
+    "platform": ["PC", "Xbox", "PlayStation", "Switch"],
     "memoryUsage": "1GB"
   },
   {
@@ -1028,6 +983,7 @@
       "GPU: GeForce GTX 1060 6GB"
     ],
     "platform": ["PC"],
-    "memoryUsage": "7GB"
+    "memoryUsage": "7GB",
+    "sale": 20
   }
 ]

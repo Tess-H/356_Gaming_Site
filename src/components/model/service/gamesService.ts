@@ -35,6 +35,7 @@ export const games: Game[] = gamesJson.map((gamesJson: any): Game => {
     gameSpecs: gamesJson.gameSpecs,
     platforms: gamesJson.platform,
     memoryUsage: gamesJson.memoryUsage,
+    sale: gamesJson.sale,
   };
 });
 
