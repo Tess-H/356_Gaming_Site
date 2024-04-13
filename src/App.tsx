@@ -73,22 +73,75 @@ function App() {
     return !selectedGenre || game.genre?.includes(selectedGenre);
   };
 
+  const [selectedVibe, setSelectedVibe] = useState<string | null>(null);
+  const selectedVibeRef = useRef<string | null>(null);
+  selectedVibeRef.current = selectedVibe;
+  const vibeFilter: Filter = (game) => {
+    const selectedVibe = selectedVibeRef.current;
+    return !selectedVibe || game.vibe?.includes(selectedVibe);
+  };
+
   const [maxPrice, setMaxPrice] = useState<number | null>(null);
   const maxPriceRef = useRef<number | null>(null);
   maxPriceRef.current = maxPrice;
 
-  const priceFilter: Filter = (game) => {
+  const maxPriceFilter: Filter = (game) => {
     const maxPrice = maxPriceRef.current;
     if (maxPrice === null) return true;
     const finalPrice = game.sale ?? game.price;
     return finalPrice <= maxPrice;
   };
 
+  const [minPrice, setMinPrice] = useState<number | null>(null);
+  const minPriceRef = useRef<number | null>(null);
+  minPriceRef.current = minPrice;
+
+  const minPriceFilter: Filter = (game) => {
+    const minPrice = minPriceRef.current;
+    if (minPrice === null) return true;
+    const finalPrice = game.sale ?? game.price;
+    return finalPrice >= minPrice;
+  };
+  // Add a filter that corresponds with a checkbox -- if the checkbox is checked, the filter filters out games that are not on sale
+  const [showSale, setShowSale] = useState(false);
+  const showSaleRef = useRef(false);
+  showSaleRef.current = showSale;
+
+  const saleFilter: Filter = (game) => {
+    const showSale = showSaleRef.current;
+    return !showSale || game.sale !== undefined;
+  };
+  // Add filters for where to buy and platform
+  const [selectedPlatform, setSelectedPlatform] = useState<string | null>(null);
+  const selectedPlatformRef = useRef<string | null>(null);
+  selectedPlatformRef.current = selectedPlatform;
+
+  const platformFilter: Filter = (game) => {
+    const selectedPlatform = selectedPlatformRef.current;
+    return !selectedPlatform || game.platforms.includes(selectedPlatform);
+  };
+
+  const [selectedSoldWhere, setSelectedSoldWhere] = useState<string | null>(
+    null
+  );
+  const selectedSoldWhereRef = useRef<string | null>(null);
+  selectedSoldWhereRef.current = selectedSoldWhere;
+
+  const soldWhereFilter: Filter = (game) => {
+    const selectedSoldWhere = selectedSoldWhereRef.current;
+    return !selectedSoldWhere || game.soldWhere.includes(selectedSoldWhere);
+  };
+
   const [gameFilterSet, _setGameFilter] = useState<FilterSet>({
     searchFilter,
     starredFilter,
     genreFilter,
-    priceFilter, // include the new price filter
+    maxPriceFilter,
+    minPriceFilter,
+    vibeFilter,
+    saleFilter,
+    platformFilter,
+    soldWhereFilter,
   });
 
   const filterGames = (games: Game[]) =>
@@ -215,6 +268,7 @@ function App() {
           >
             Clear All Stars
           </div>
+          <hr className="sidebar-divider" /> {/* Divider line */}
           <select
             value={selectedGenre || ""}
             onChange={(e) => setSelectedGenre(e.target.value)}
@@ -229,17 +283,86 @@ function App() {
                 </option>
               ))}
           </select>
+          <select
+            value={selectedVibe || ""}
+            onChange={(e) => setSelectedVibe(e.target.value)}
+            className="sidebar-control-box" // Add this class to your select
+          >
+            <option value="">All Vibes</option>
+            {[...new Set(games.flatMap((game) => game.vibe || []))]
+              .sort()
+              .map((vibe) => (
+                <option key={vibe} value={vibe}>
+                  {vibe}
+                </option>
+              ))}
+          </select>
+          <hr className="sidebar-divider" /> {/* Divider line */}
+          <div className="price-filter-container">
+            <input
+              type="number"
+              placeholder="Min Price"
+              value={minPrice || ""}
+              onChange={(e) =>
+                setMinPrice(e.target.value ? parseInt(e.target.value) : null)
+              }
+              min={0}
+              className="sidebar-control-box min-price" // Added specific class for min price input
+            />
+            <input
+              type="number"
+              placeholder="Max Price"
+              value={maxPrice || ""}
+              onChange={(e) =>
+                setMaxPrice(e.target.value ? parseInt(e.target.value) : null)
+              }
+              min={0}
+              className="sidebar-control-box max-price" // Added specific class for max price input
+            />
 
-          <input
-            type="number"
-            placeholder="Max Price"
-            value={maxPrice || ""}
-            onChange={(e) =>
-              setMaxPrice(e.target.value ? parseInt(e.target.value) : null)
-            }
-            min={0}
-            className="sidebar-control-box max-price" // Added specific class for max price input
-          />
+          </div>
+          <label
+              className="sidebar-control-box"
+              style={{ display: "block", margin: "0.5em 0" }}
+            >
+              <input
+                type="checkbox"
+                checked={showSale}
+                onChange={() => setShowSale(!showSale)}
+              />
+              On Sale Only
+            </label>
+          <hr className="sidebar-divider" /> {/* Divider line */}
+          <div className="select-filter-container">
+            <select
+              value={selectedPlatform || ""}
+              onChange={(e) => setSelectedPlatform(e.target.value)}
+              className="sidebar-control-box" // Add this class to your select
+            >
+              <option value="">All Platforms</option>
+              {[...new Set(games.flatMap((game) => game.platforms))]
+                .sort()
+                .map((platform) => (
+                  <option key={platform} value={platform}>
+                    {platform}
+                  </option>
+                ))}
+            </select>
+            <select
+              value={selectedSoldWhere || ""}
+              onChange={(e) => setSelectedSoldWhere(e.target.value)}
+              className="sidebar-control-box" // Add this class to your select
+            >
+              <option value="">All Vendors</option>
+              {[...new Set(games.flatMap((game) => game.soldWhere))]
+                .sort()
+                .map((soldWhere) => (
+                  <option key={soldWhere} value={soldWhere}>
+                    {soldWhere}
+                  </option>
+                ))}
+            </select>
+          </div>
         </div>
       </div>
 

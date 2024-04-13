@@ -424,3 +424,46 @@ input.sidebar-control-box:focus {
   border-color: #555;
   background-color: #222;
 }
+
+/* Styles for dividing lines between filter categories */
+.sidebar-divider {
+  /* Lower the opacity of the lines even more */
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  border: 0;
+  height: 1px;
+  margin: 20px 0; /* Adjust spacing as necessary */
+}
+
+/* Adjust the width of input boxes for max and min prices */
+input.sidebar-control-box[type="number"] {
+  width: 100%; /* Full width within the sidebar container */
+  margin-bottom: 10px; /* Spacing after each input */
+}
+
+/* Container for price inputs to align them on the same line */
+.price-filter-container {
+  margin-left: 25px; /* Adjust the left margin to align with the select inputs */
+  margin-right: 20.625px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adjust the spacing between inputs */
+}
+
+/* Individual price input adjustments */
+.price-input {
+  flex: 1; /* Each input will take up equal space */
+}
+
+/* Container for select inputs to align them on the same line */
+.select-filter-container {
+  display: flex;
+  
+  justify-content: space-between;
+  margin-right: 20.625px;
+  /* gap: 10px; Adjust the spacing between selects */
+}
+
+/* Adjustments for individual select inputs */
+.select-input {
+  flex: 1; /* Each select will take up equal space */
+}
