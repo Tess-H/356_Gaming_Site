@@ -15,7 +15,7 @@ header {
   height: 56px;
   text-align: left;
   background: #333;
-  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
   z-index: 500;
   user-select: none;
   -webkit-user-select: none;
@@ -29,7 +29,7 @@ header {
   cursor: pointer;
 }
 .header-button:hover {
-  background: rgba(255,255,255,.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 header h1 {
@@ -38,14 +38,20 @@ header h1 {
   vertical-align: top;
   font-size: 20px;
   line-height: 54px;
-  background: linear-gradient(150deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background: linear-gradient(
+    150deg,
+    var(--text-color) 0%,
+    var(--text-color) 33%,
+    rgba(244, 207, 28, 1) 67%,
+    rgba(236, 40, 116, 1) 100%
+  );
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 100px 168px;
   background-position: top left;
-  transition: background-position .3s;
+  transition: background-position 0.3s;
 }
 header h1:hover {
   background-position: bottom left;
@@ -57,7 +63,7 @@ header h1:hover {
   vertical-align: top;
   font-size: 15px;
   line-height: 56px;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 #breadcrumbs.hide {
   opacity: 0;
@@ -66,7 +72,7 @@ header h1:hover {
   line-height: 56px;
   height: 56px;
   margin: 0 8px;
-  color: rgba(255,255,255,.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 #breadcrumbs > span:not(.bc-chevron) {
   display: inline-block;
@@ -76,9 +82,9 @@ header h1:hover {
   line-height: 1em;
   vertical-align: 7px;
   border-radius: 4px;
-  background: rgba(255,255,255,.15);
+  background: rgba(255, 255, 255, 0.15);
   cursor: pointer;
-  transition: color .2s;
+  transition: color 0.2s;
 }
 #breadcrumbs > span:not(.bc-chevron):hover {
   color: #000;
@@ -88,10 +94,14 @@ header h1:hover {
   position: absolute;
   inset: 0;
   border-radius: 4px;
-  background: linear-gradient(150deg, rgba(244,207,28,1) 0%, rgba(236,40,116,1) 100%);
+  background: linear-gradient(
+    150deg,
+    rgba(244, 207, 28, 1) 0%,
+    rgba(236, 40, 116, 1) 100%
+  );
   background-size: 100% calc(1em + 10px);
   background-position: bottom left;
-  transition: background-position .2s, opacity .2s;
+  transition: background-position 0.2s, opacity 0.2s;
   opacity: 0;
   z-index: -1;
 }
@@ -106,7 +116,7 @@ header h1:hover {
   vertical-align: top;
   margin-left: -16px;
   opacity: 0;
-  transition: margin-left .2s, opacity .2s, text-shadow .1s;
+  transition: margin-left 0.2s, opacity 0.2s, text-shadow 0.1s;
 }
 #breadcrumbs > span:not(.bc-chevron):hover .bc-remove {
   margin-left: 4px;
@@ -118,14 +128,20 @@ header h1:hover {
 
 #menu-button::before {
   content: "menu";
-  background: linear-gradient(140deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background: linear-gradient(
+    140deg,
+    var(--text-color) 0%,
+    var(--text-color) 33%,
+    rgba(244, 207, 28, 1) 67%,
+    rgba(236, 40, 116, 1) 100%
+  );
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 24px 72px;
   background-position: top left;
-  transition: background-position .3s;
+  transition: background-position 0.3s;
 }
 #menu-button:hover::before {
   background-position: bottom left;
@@ -143,23 +159,29 @@ header h1:hover {
 
 #search-button {
   margin-right: -35vw;
-  transition: margin-right .2s;
+  transition: margin-right 0.2s;
 }
 #search-button::before {
   content: "search";
-  background: linear-gradient(140deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background: linear-gradient(
+    140deg,
+    var(--text-color) 0%,
+    var(--text-color) 33%,
+    rgba(244, 207, 28, 1) 67%,
+    rgba(236, 40, 116, 1) 100%
+  );
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 24px 72px;
   background-position: top left;
-  transition: background-position .3s;
+  transition: background-position 0.3s;
 }
 #search-button:hover::before {
   background-position: bottom left;
 }
-#search-button:has(+#search-collapse.show) {
+#search-button:has(+ #search-collapse.show) {
   margin-right: 0;
 }
 #search-collapse {
@@ -170,7 +192,7 @@ header h1:hover {
   border-right: 1px solid #555;
   transform-origin: right center;
   transform: scaleX(0);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 #search-collapse.show {
   transform: scaleX(1);
@@ -194,14 +216,20 @@ header h1:hover {
 
 #search-go::before {
   content: "send";
-  background: linear-gradient(140deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background: linear-gradient(
+    140deg,
+    var(--text-color) 0%,
+    var(--text-color) 33%,
+    rgba(244, 207, 28, 1) 67%,
+    rgba(236, 40, 116, 1) 100%
+  );
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 24px 72px;
   background-position: top left;
-  transition: background-position .3s;
+  transition: background-position 0.3s;
 }
 #search-go:hover::before {
   background-position: bottom left;
@@ -212,14 +240,20 @@ header h1:hover {
   height: 24px;
   width: 24px;
 
-  background: linear-gradient(140deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background: linear-gradient(
+    140deg,
+    var(--text-color) 0%,
+    var(--text-color) 33%,
+    rgba(244, 207, 28, 1) 67%,
+    rgba(236, 40, 116, 1) 100%
+  );
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 24px 72px;
   background-position: top left;
-  transition: background-position .5s;
+  transition: background-position 0.5s;
 }
 #random-button:hover #random-button-icon {
   background-position: bottom left;
@@ -227,25 +261,29 @@ header h1:hover {
 #random-button-icon::before {
   content: "casino";
   display: inline-block;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
 #random-button:hover #random-button-icon::before {
   animation-name: spin-dice;
 }
 @keyframes spin-dice {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #sidebar-overlay {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 #sidebar-overlay.show {
-  background: rgba(0,0,0,.4);
+  background: rgba(0, 0, 0, 0.4);
   pointer-events: unset;
 }
 #sidebar-container {
@@ -261,8 +299,8 @@ header h1:hover {
   overscroll-behavior: contain;
   text-align: left;
   background: #222;
-  box-shadow: 2px 0 3px rgba(0,0,0,.4);
-  transition: left .3s;
+  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.4);
+  transition: left 0.3s;
 }
 #sidebar-overlay.show #sidebar-container {
   left: 0;
@@ -271,7 +309,7 @@ header h1:hover {
 .sidebar-control-box {
   height: 48px;
   padding: 12px 24px;
-  transition: background .1s;
+  transition: background 0.1s;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -295,11 +333,17 @@ header h1:hover {
   border-radius: 12px;
   /*background: rgba(255,255,255,.15);*/
   /*transition: background .1s;*/
-  background: linear-gradient(150deg, #fff 0%, #fff 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background: linear-gradient(
+    150deg,
+    #fff 0%,
+    #fff 33%,
+    rgba(244, 207, 28, 1) 67%,
+    rgba(236, 40, 116, 1) 100%
+  );
   background-size: 48px 100px;
   background-position: top left;
-  transition: background-position .2s, opacity .2s;
-  opacity: .15;
+  transition: background-position 0.2s, opacity 0.2s;
+  opacity: 0.15;
 }
 .sidebar-toggle.on::before {
   /*background: #669bbc;*/
@@ -314,16 +358,69 @@ header h1:hover {
   height: 18px;
   width: 18px;
   border-radius: 100%;
-  background: rgba(255,255,255,.5);
-  transition: right .2s, background .2s;
+  background: rgba(255, 255, 255, 0.5);
+  transition: right 0.2s, background 0.2s;
 }
 .sidebar-toggle:hover::after {
-  background: rgba(255,255,255,.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 .sidebar-toggle.on::after {
   right: 19px;
-  background: rgba(255,255,255,.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 .sidebar-toggle:hover::after {
-  background: rgba(255,255,255,.9);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Additional styles for sidebar controls */
+/* Smaller input for max price and add margin for spacing */
+input.sidebar-control-box.max-price {
+  width: 40%; /* Adjust width as needed */
+  display: inline-block; /* Allows it to sit next to other elements */
+}
+
+/* Add some margin below the select box for spacing */
+select.sidebar-control-box {
+  margin-right: 20px; 
+  margin-left: 24px; /* Spacing between the elements */
+}
+
+select.sidebar-control-box,
+input.sidebar-control-box {
+  color: #fff;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 10px; /* Spacing between the elements */
+  outline: none; /* Removes the default focus outline */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+/* Styles for select elements */
+select.sidebar-control-box {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #444, #444);
+  background-position: calc(100% - 20px) center, calc(100% - 15px) center,
+    100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em; /* Arrow size */
+  background-repeat: no-repeat;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+select.sidebar-control-box:focus {
+  background-position: calc(100% - 20px) center, calc(100% - 15px) center,
+    100% 0; /* Reset the position */
+  border-color: #555;
+  background-color: #222;
+}
+
+/* Focus styles for input */
+input.sidebar-control-box:focus {
+  border-color: #555;
+  background-color: #222;
 }
