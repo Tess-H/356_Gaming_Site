@@ -47,13 +47,13 @@
   padding: 0 12px 0 8px;
   height: 36px;
   line-height: 36px;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   cursor: pointer;
-  transition: background .1s;
+  transition: background 0.1s;
 }
 .game-star-button:hover {
-  background: rgba(0,0,0,.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 .game-star-button .game-star-icon {
   vertical-align: top;
@@ -62,20 +62,26 @@
   line-height: 36px;
 }
 .game-star-button.starred .game-star-icon {
-  font-variation-settings: 'FILL' 1;
+  font-variation-settings: "FILL" 1;
   color: #f6bd60;
   opacity: 1;
 }
 .game-star-button .game-star-icon::before {
   content: "star";
-  background: linear-gradient(150deg, var(--text-color) 0%, var(--text-color) 33%, rgba(244,207,28,1) 67%, rgba(236,40,116,1) 100%);
+  background: linear-gradient(
+    150deg,
+    var(--text-color) 0%,
+    var(--text-color) 33%,
+    rgba(244, 207, 28, 1) 67%,
+    rgba(236, 40, 116, 1) 100%
+  );
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 24px 72px;
   background-position: top left;
-  transition: background-position .1s;
+  transition: background-position 0.1s;
 }
 .game-star-button.starred .game-star-icon::before {
   background-position: bottom left;
@@ -95,14 +101,16 @@
   .game-info-columns {
     display: flex;
   }
-  .game-info-left, .game-info-right {
+  .game-info-left,
+  .game-info-right {
     margin-bottom: 28px;
   }
   .game-platforms {
     text-align: right;
   }
 }
-.game-info-left, .game-info-right {
+.game-info-left,
+.game-info-right {
   margin: 16px 20px;
 }
 .game-info-left {

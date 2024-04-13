@@ -13,7 +13,7 @@
     "similarGames": [
       "Legend of Zelda Breath of the Wild",
       "Genshin Impact",
-      "Immortals Fenxy Rising"
+      "Immortals Fenyx Rising"
     ],
     "gamesByDevelopers": [
       "Legend of Zelda Breath of the Wild",
@@ -141,7 +141,7 @@
     "competitive": "No",
     "developerSite": "https://www.ubisoft.com/en-us/game/immortals-fenyx-rising",
     "soldWhere": [
-      "Microsoft EShop, Playstation Eshop, Steam, Amazon, GameStop, Ubisoft Store"
+      "Microsoft EShop", "Playstation Eshop", "Steam", "Amazon", "GameStop", "Ubisoft Store"
     ],
     "rating": "T",
     "awards": [
