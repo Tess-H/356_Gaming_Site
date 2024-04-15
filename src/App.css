@@ -306,7 +306,7 @@ img#user-profile-icon {
   height: 100%;
   width: 360px;
   max-width: 100vw;
-  padding-top: 64px;
+  padding: 70px 0 24px;
   overflow-y: auto;
   overscroll-behavior: contain;
   text-align: left;
@@ -316,6 +316,13 @@ img#user-profile-icon {
 }
 #sidebar-overlay.show #sidebar-container {
   left: 0;
+}
+
+h2.sidebar-title {
+  padding: 12px 24px 4px;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .sidebar-control-box {
@@ -346,12 +353,9 @@ img#user-profile-icon {
   /*background: rgba(255,255,255,.15);*/
   /*transition: background .1s;*/
   background: linear-gradient(
-    150deg,
-    #fff 0%,
-    #fff 33%,
-    rgba(244, 207, 28, 1) 67%,
-    rgba(236, 40, 116, 1) 100%
-  );
+    150deg, #fff 0%, #fff 33%,
+    rgba(244,207,28,1) 67%,
+    rgba(236,40,116,1) 100%);
   background-size: 48px 100px;
   background-position: top left;
   transition: background-position 0.2s, opacity 0.2s;
@@ -384,97 +388,96 @@ img#user-profile-icon {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/* Additional styles for sidebar controls */
-/* Smaller input for max price and add margin for spacing */
-input.sidebar-control-box.max-price {
-  width: 40%; /* Adjust width as needed */
-  display: inline-block; /* Allows it to sit next to other elements */
+.sidebar-divider {
+  margin: 8px 0;
+  height: 1px;
+  border: 0;
+  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,.2), rgba(255,255,255,.2), rgba(255,255,255,0));
 }
 
-/* Add some margin below the select box for spacing */
-select.sidebar-control-box {
-  margin-right: 20px; 
-  margin-left: 24px; /* Spacing between the elements */
+.sidebar-select-box {
+  position: relative;
+  padding: 0 24px;
+  height: 48px;
+  transition: background 0.1s;
 }
-
-select.sidebar-control-box,
-input.sidebar-control-box {
-  color: #fff;
+.sidebar-select-box:hover {
   background: #333;
-  border: 1px solid #444;
-  border-radius: 4px;
-  padding: 8px 12px;
-  margin-bottom: 10px; /* Spacing between the elements */
-  outline: none; /* Removes the default focus outline */
-  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
-
-/* Styles for select elements */
-select.sidebar-control-box {
+.sidebar-select-arrow {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  bottom: 0;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  pointer-events: none;
+}
+.sidebar-select-arrow::after {
+  content: "expand_more";
+}
+select.sidebar-select {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: "Open Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  background: transparent;
+  border: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, white 50%),
-    linear-gradient(135deg, white 50%, transparent 50%),
-    linear-gradient(to right, #444, #444);
-  background-position: calc(100% - 20px) center, calc(100% - 15px) center,
-    100% 0;
-  background-size: 5px 5px, 5px 5px, 2.5em 2.5em; /* Arrow size */
-  background-repeat: no-repeat;
-  transition: background-color 0.3s, border-color 0.3s;
+  outline: none;
+  cursor: pointer;
 }
 
-select.sidebar-control-box:focus {
-  background-position: calc(100% - 20px) center, calc(100% - 15px) center,
-    100% 0; /* Reset the position */
-  border-color: #555;
-  background-color: #222;
-}
-
-/* Focus styles for input */
-input.sidebar-control-box:focus {
-  border-color: #555;
-  background-color: #222;
-}
-
-/* Styles for dividing lines between filter categories */
-.sidebar-divider {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2), rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
-  border: 0;
-  height: 1px;
-  margin: 8px 0;
-}
-
-/* Adjust the width of input boxes for max and min prices */
-input.sidebar-control-box[type="number"] {
-  width: 100%; /* Full width within the sidebar container */
-  margin-bottom: 10px; /* Spacing after each input */
-}
-
-/* Container for price inputs to align them on the same line */
 .price-filter-container {
-  margin-left: 25px; /* Adjust the left margin to align with the select inputs */
-  margin-right: 20.625px;
   display: flex;
+  height: 48px;
+  padding: 6px 16px;
   justify-content: space-between;
-  gap: 20px; /* Adjust the spacing between inputs */
+  gap: 8px;
 }
-
-/* Individual price input adjustments */
-.price-input {
-  flex: 1; /* Each input will take up equal space */
+.price-filter {
+  flex: 1;
+  position: relative;
 }
-
-/* Container for select inputs to align them on the same line */
-.select-filter-container {
-  display: flex;
-  
-  justify-content: space-between;
-  margin-right: 20.625px;
-  /* gap: 10px; Adjust the spacing between selects */
+.price-filter input {
+  width: 100%;
+  height: 100%;
+  padding: 0 8px;
+  font-size: 16px;
+  font-family: "Open Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  outline: none;
 }
-
-/* Adjustments for individual select inputs */
-.select-input {
-  flex: 1; /* Each select will take up equal space */
+.price-filter input:focus {
+  border-color: #666;
+}
+.price-filter input:not(:focus):placeholder-shown {
+  background: rgba(255,255,255,.06);
+  border: 1px solid #444;
+}
+.price-filter input:not(:placeholder-shown) {
+  padding-left: 17px;
+}
+.price-filter:has(input:not(:placeholder-shown))::before {
+  content: "$";
+  display: block;
+  position: absolute;
+  top: 7px; left: 9px;
+  pointer-events: none;
+}
+.price-filter-dash {
+  align-self: center;
+  padding-bottom: 3px;
+  pointer-events: none;
 }

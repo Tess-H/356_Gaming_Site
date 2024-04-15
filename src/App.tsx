@@ -246,47 +246,53 @@ function App() {
         className={isSidebarOpen? "show" : ""}
         onClick={sidebarOverlayClick}>
         <div id="sidebar-container">
-          <select value={selectedGenre || ""}
-            onChange={(e) => setSelectedGenre(e.target.value)}
-            className="sidebar-control-box">
-            <option value="">All Genres</option>
-            {[...new Set(games.flatMap((game) => game.genre || []))]
-              .sort()
-              .map((genre) => (
-                <option key={genre} value={genre}>
-                  {genre}
-                </option>
-              ))}
-          </select>
-          <select
-            value={selectedVibe || ""}
-            onChange={(e) => setSelectedVibe(e.target.value)}
-            className="sidebar-control-box">
-            <option value="">All Vibes</option>
-            {[...new Set(games.flatMap((game) => game.vibe || []))]
-              .sort()
-              .map((vibe) => (
-                <option key={vibe} value={vibe}>
-                  {vibe}
-                </option>
-              ))}
-          </select>
+          <h2 className="sidebar-title">Filters</h2>
+          <hr className="sidebar-divider"/>
+
+          <div className="sidebar-select-box">
+            <div className="sidebar-select-arrow material-symbols-outlined"></div>
+            <select value={selectedGenre || ""}
+              onChange={(e) => setSelectedGenre(e.target.value)}
+              className="sidebar-select">
+              <option value="">Any Genre</option>
+              {[...new Set(games.flatMap((game) => game.genre || []))]
+                .sort().map((genre) =>
+                  (<option key={genre} value={genre}>{genre}</option>))}
+            </select>
+          </div>
+          <div className="sidebar-select-box">
+            <div className="sidebar-select-arrow material-symbols-outlined"></div>
+            <select
+              value={selectedVibe || ""}
+              onChange={(e) => setSelectedVibe(e.target.value)}
+              className="sidebar-select">
+              <option value="">Any Vibe</option>
+              {[...new Set(games.flatMap((game) => game.vibe || []))]
+                .sort().map((vibe) =>
+                  (<option key={vibe} value={vibe}>{vibe}</option>))}
+            </select>
+          </div>
 
           <hr className="sidebar-divider"/>
 
           <div className="price-filter-container">
-            <input type="number"
-              placeholder="Min Price"
-              value={minPrice || ""} min={0}
-              onChange={(e) => setMinPrice(e.target.value?
-                parseInt(e.target.value) : null)}
-              className="sidebar-control-box min-price"/>
-            <input type="number"
-              placeholder="Max Price"
-              value={maxPrice || ""} min={0}
-              onChange={(e) => setMaxPrice(e.target.value?
-                parseInt(e.target.value) : null)}
-              className="sidebar-control-box max-price"/>
+            <div className="price-filter">
+              <input type="number"
+                className="min-price"
+                placeholder="Min Price"
+                value={minPrice || ""} min={0}
+                onChange={(e) => setMinPrice(e.target.value?
+                  parseInt(e.target.value) : null)}/>
+            </div>
+            <div className="price-filter-dash">&ndash;</div>
+            <div className="price-filter">
+              <input type="number"
+                className="max-price"
+                placeholder="Max Price"
+                value={maxPrice || ""} min={0}
+                onChange={(e) => setMaxPrice(e.target.value?
+                  parseInt(e.target.value) : null)}/>
+            </div>
           </div>
 
           <div className={"sidebar-control-box sidebar-toggle"+(showSale? " on" : "")}
@@ -296,30 +302,26 @@ function App() {
 
           <hr className="sidebar-divider"/>
 
-          <div className="select-filter-container">
-            <select className="sidebar-control-box"
+          <div className="sidebar-select-box">
+            <div className="sidebar-select-arrow material-symbols-outlined"></div>
+            <select className="sidebar-select"
               value={selectedPlatform || ""}
               onChange={(e) => setSelectedPlatform(e.target.value)}>
-              <option value="">All Platforms</option>
+              <option value="">Any Platform</option>
               {[...new Set(games.flatMap((game) => game.platforms))]
-                .sort()
-                .map((platform) => (
-                  <option key={platform} value={platform}>
-                    {platform}
-                  </option>
-                ))}
+                .sort().map((platform) =>
+                  (<option key={platform} value={platform}>{platform}</option>))}
             </select>
-            <select className="sidebar-control-box"
+          </div>
+          <div className="sidebar-select-box">
+            <div className="sidebar-select-arrow material-symbols-outlined"></div>
+            <select className="sidebar-select"
               value={selectedSoldWhere || ""}
               onChange={(e) => setSelectedSoldWhere(e.target.value)}>
-              <option value="">All Vendors</option>
+              <option value="">Any Vendor</option>
               {[...new Set(games.flatMap((game) => game.soldWhere))]
-                .sort()
-                .map((soldWhere) => (
-                  <option key={soldWhere} value={soldWhere}>
-                    {soldWhere}
-                  </option>
-                ))}
+                .sort().map((soldWhere) =>
+                  (<option key={soldWhere} value={soldWhere}>{soldWhere}</option>))}
             </select>
           </div>
 
