@@ -1,8 +1,11 @@
 #root {
+  padding-top: 56px;
+}
+#game-cards-outer-container {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 72px 2em 2em;
+  padding: 24px 2em 2em;
   text-align: center;
 }
 
@@ -286,6 +289,44 @@ img#user-profile-icon {
   vertical-align: -2px;
   border-radius: 8px;
   filter: hue-rotate(180deg);
+}
+
+.sale-banner {
+  position: relative;
+  background: no-repeat bottom right url("img/banner/long_background.png");
+  background-color: #7B2E31;
+  text-align: center;
+  line-height: 0;
+  transition: margin-top .2s;
+}
+.sale-banner.hide {
+  margin-top: calc(-291px * 0.8);
+}
+.sale-banner::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: calc(291px * 0.8);
+  width: calc(902px * 0.8);
+  top: 0;
+  left: calc(100vw - 1100px);
+  background: url("img/banner/long_icons.png");
+  background-size: 100%;
+}
+.sale-banner-text {
+  height: calc(291px * 0.75);
+  margin: calc(291px * 0.02) 0 calc(291px * 0.03);
+}
+.sale-banner-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  height: 48px;
+  width: 48px;
+  padding: 12px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 #sidebar-overlay {

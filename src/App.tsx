@@ -20,6 +20,8 @@ function App() {
   const searchInput = useRef<HTMLInputElement>(null);
   const [isSearchOpen, setSearchOpen] = useState(false);
 
+  const [showSaleBanner, setShowSaleBanner] = useState(true);
+
   const sidebarOverlay = useRef<HTMLDivElement>(null);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
@@ -234,12 +236,22 @@ function App() {
         </div>
       </header>
 
-      <GameCardsContainer
-        games={filterGames(games)}
-        starredGames={starredGames}
-        onToggleStarred={toggleStarred}
-        onOpenModal={openModal}
-      />
+      <div className={"sale-banner" + (showSaleBanner? "" : " hide")}>
+        <div className="sale-banner-close material-symbols-outlined"
+          onClick={() => setShowSaleBanner(false)}>close</div>
+        <img className="sale-banner-text"
+          src="img/banner/long_text.png"
+          alt="Level Up Your Fun" />
+      </div>
+
+      <div id="game-cards-outer-container">
+        <GameCardsContainer
+          games={filterGames(games)}
+          starredGames={starredGames}
+          onToggleStarred={toggleStarred}
+          onOpenModal={openModal}
+        />
+      </div>
 
       <div id="sidebar-overlay"
         ref={sidebarOverlay}
