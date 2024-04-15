@@ -145,3 +145,29 @@
 .game-modal-content ul li {
   margin-left: 1.5em;
 }
+
+.game-full-price {
+  margin-right: .4em;
+  text-decoration: line-through;
+  color: rgba(255,255,255,.35);
+}
+.game-price.sale .game-current-price {
+  display: inline-block;
+  margin: 4px 0;
+  padding: 2px 6px;
+  font-weight: 600;
+  color: #000;
+  background: linear-gradient(
+    150deg,
+    var(--text-color) 0%,
+    var(--text-color) 33%,
+    rgba(244, 207, 28, 1) 67%,
+    rgba(236, 40, 116, 1) 100%
+  );
+  background-size: 100% 200px;
+  background-position: bottom left;
+  border-radius: 4px;
+}
+.game-sale-percent {
+  margin-left: .3em;
+}

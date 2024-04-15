@@ -43,7 +43,12 @@ const GameModal: React.FC<GameModalProps> = ({ game, isOpen, onClose, isStarred,
 
             <p className="game-desc">{game.description}</p>
             <p className="game-rating">Rated {game.rating}</p>
-            <p className="game-price">{game.price? "$"+game.price : "Free to play"}</p>
+            <p className={"game-price" + (game.sale? " sale" : "")}>
+              {game.sale? (<span className="game-full-price">${game.price}</span>) : null}
+              <span className="game-current-price">{game.price? "$"+(game.price * (100 - (game.sale || 0))/100) : "Free to play"}
+              {game.sale? (<span className="game-sale-percent">({game.sale}% off)</span>) : null}
+              </span>
+            </p>
           </div>
 
           <div className="game-info-right">
