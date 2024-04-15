@@ -499,6 +499,7 @@ select.sidebar-select {
   -webkit-appearance: none;
   -moz-appearance: textfield;
   outline: none;
+  transition: background .1s;
 }
 .price-filter input:focus {
   border-color: #666;
@@ -506,6 +507,9 @@ select.sidebar-select {
 .price-filter input:not(:focus):placeholder-shown {
   background: rgba(255,255,255,.06);
   border: 1px solid #444;
+}
+.price-filter input:not(:focus):placeholder-shown:hover {
+  background: rgba(255,255,255,.1);
 }
 .price-filter input:not(:placeholder-shown) {
   padding-left: 17px;
