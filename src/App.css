@@ -276,6 +276,18 @@ header h1:hover {
   }
 }
 
+#user-profile-button {
+  width: 64px;
+  padding: 14px 18px;
+}
+img#user-profile-icon {
+  height: 28px;
+  width: 28px;
+  vertical-align: -2px;
+  border-radius: 8px;
+  filter: hue-rotate(180deg);
+}
+
 #sidebar-overlay {
   position: fixed;
   inset: 0;
@@ -427,11 +439,10 @@ input.sidebar-control-box:focus {
 
 /* Styles for dividing lines between filter categories */
 .sidebar-divider {
-  /* Lower the opacity of the lines even more */
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2), rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
   border: 0;
   height: 1px;
-  margin: 20px 0; /* Adjust spacing as necessary */
+  margin: 8px 0;
 }
 
 /* Adjust the width of input boxes for max and min prices */

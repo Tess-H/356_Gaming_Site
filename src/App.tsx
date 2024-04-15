@@ -209,31 +209,27 @@ function App() {
           <span
             id="search-button"
             className="material-symbols-outlined header-button"
-            onClick={toggleSearch}
-          ></span>
+            onClick={toggleSearch}></span>
           <div id="search-collapse" className={isSearchOpen ? "show" : ""}>
-            <input
-              id="search-input"
+            <input id="search-input"
               ref={searchInput}
               type="search"
               placeholder="Search"
               onInput={doSearchInput}
-              onKeyDown={doSearchEscapeKey}
-            />
-            <span
-              id="search-go"
-              className="material-symbols-outlined header-button"
-            ></span>
+              onKeyDown={doSearchEscapeKey} />
+            <span id="search-go"
+              className="material-symbols-outlined header-button"></span>
           </div>
-          <span
-            id="random-button"
+          <span id="random-button"
             className="header-button"
-            onClick={showRandomGame}
-          >
-            <span
-              id="random-button-icon"
-              className="material-symbols-outlined"
-            ></span>
+            onClick={showRandomGame}>
+            <span id="random-button-icon"
+              className="material-symbols-outlined"></span>
+          </span>
+          <span id="user-profile-button"
+            className="header-button">
+            <img id="user-profile-icon"
+              src="img/profile.jpg" alt="User Profile" />
           </span>
         </div>
       </header>
@@ -245,35 +241,14 @@ function App() {
         onOpenModal={openModal}
       />
 
-      <div
-        id="sidebar-overlay"
+      <div id="sidebar-overlay"
         ref={sidebarOverlay}
-        className={isSidebarOpen ? "show" : ""}
-        onClick={sidebarOverlayClick}
-      >
+        className={isSidebarOpen? "show" : ""}
+        onClick={sidebarOverlayClick}>
         <div id="sidebar-container">
-          <div
-            id="starred-only-toggle"
-            className={
-              "sidebar-control-box sidebar-toggle" + (starredOnly ? " on" : "")
-            }
-            onClick={toggleStarredOnly}
-          >
-            Starred Only
-          </div>
-          <div
-            id="clear-all-stars"
-            className="sidebar-control-box sidebar-button"
-            onClick={clearAllStars}
-          >
-            Clear All Stars
-          </div>
-          <hr className="sidebar-divider" /> {/* Divider line */}
-          <select
-            value={selectedGenre || ""}
+          <select value={selectedGenre || ""}
             onChange={(e) => setSelectedGenre(e.target.value)}
-            className="sidebar-control-box" // Add this class to your select
-          >
+            className="sidebar-control-box">
             <option value="">All Genres</option>
             {[...new Set(games.flatMap((game) => game.genre || []))]
               .sort()
@@ -286,8 +261,7 @@ function App() {
           <select
             value={selectedVibe || ""}
             onChange={(e) => setSelectedVibe(e.target.value)}
-            className="sidebar-control-box" // Add this class to your select
-          >
+            className="sidebar-control-box">
             <option value="">All Vibes</option>
             {[...new Set(games.flatMap((game) => game.vibe || []))]
               .sort()
@@ -297,48 +271,35 @@ function App() {
                 </option>
               ))}
           </select>
-          <hr className="sidebar-divider" /> {/* Divider line */}
-          <div className="price-filter-container">
-            <input
-              type="number"
-              placeholder="Min Price"
-              value={minPrice || ""}
-              onChange={(e) =>
-                setMinPrice(e.target.value ? parseInt(e.target.value) : null)
-              }
-              min={0}
-              className="sidebar-control-box min-price" // Added specific class for min price input
-            />
-            <input
-              type="number"
-              placeholder="Max Price"
-              value={maxPrice || ""}
-              onChange={(e) =>
-                setMaxPrice(e.target.value ? parseInt(e.target.value) : null)
-              }
-              min={0}
-              className="sidebar-control-box max-price" // Added specific class for max price input
-            />
 
+          <hr className="sidebar-divider"/>
+
+          <div className="price-filter-container">
+            <input type="number"
+              placeholder="Min Price"
+              value={minPrice || ""} min={0}
+              onChange={(e) => setMinPrice(e.target.value?
+                parseInt(e.target.value) : null)}
+              className="sidebar-control-box min-price"/>
+            <input type="number"
+              placeholder="Max Price"
+              value={maxPrice || ""} min={0}
+              onChange={(e) => setMaxPrice(e.target.value?
+                parseInt(e.target.value) : null)}
+              className="sidebar-control-box max-price"/>
           </div>
-          <label
-              className="sidebar-control-box"
-              style={{ display: "block", margin: "0.5em 0" }}
-            >
-              <input
-                type="checkbox"
-                checked={showSale}
-                onChange={() => setShowSale(!showSale)}
-              />
-              On Sale Only
-            </label>
-          <hr className="sidebar-divider" /> {/* Divider line */}
+
+          <div className={"sidebar-control-box sidebar-toggle"+(showSale? " on" : "")}
+               onClick={() => setShowSale(!showSale)} >
+            On Sale Only
+          </div>
+
+          <hr className="sidebar-divider"/>
+
           <div className="select-filter-container">
-            <select
+            <select className="sidebar-control-box"
               value={selectedPlatform || ""}
-              onChange={(e) => setSelectedPlatform(e.target.value)}
-              className="sidebar-control-box" // Add this class to your select
-            >
+              onChange={(e) => setSelectedPlatform(e.target.value)}>
               <option value="">All Platforms</option>
               {[...new Set(games.flatMap((game) => game.platforms))]
                 .sort()
@@ -348,11 +309,9 @@ function App() {
                   </option>
                 ))}
             </select>
-            <select
+            <select className="sidebar-control-box"
               value={selectedSoldWhere || ""}
-              onChange={(e) => setSelectedSoldWhere(e.target.value)}
-              className="sidebar-control-box" // Add this class to your select
-            >
+              onChange={(e) => setSelectedSoldWhere(e.target.value)}>
               <option value="">All Vendors</option>
               {[...new Set(games.flatMap((game) => game.soldWhere))]
                 .sort()
@@ -362,6 +321,19 @@ function App() {
                   </option>
                 ))}
             </select>
+          </div>
+
+          <hr className="sidebar-divider"/>
+
+          <div id="starred-only-toggle"
+            className={"sidebar-control-box sidebar-toggle" + (starredOnly? " on" : "")}
+            onClick={toggleStarredOnly}>
+            Starred Only
+          </div>
+          <div id="clear-all-stars"
+            className="sidebar-control-box sidebar-button"
+            onClick={clearAllStars}>
+            Clear All Stars
           </div>
         </div>
       </div>
