@@ -293,7 +293,7 @@ img#user-profile-icon {
 
 .sale-banner {
   position: relative;
-  background: no-repeat bottom right url("img/banner/long_background.png");
+  background: no-repeat bottom right url("/img/banner/long_background.png");
   background-color: #7B2E31;
   text-align: center;
   line-height: 0;
@@ -310,7 +310,7 @@ img#user-profile-icon {
   width: calc(902px * 0.8);
   top: 0;
   left: calc(100vw - 1100px);
-  background: url("img/banner/long_icons.png");
+  background: url("/img/banner/long_icons.png");
   background-size: 100%;
 }
 .sale-banner-text {
