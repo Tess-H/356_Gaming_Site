@@ -29,7 +29,7 @@
   max-width: 250px;
   width: 18%;
   margin: 10px;
-  transition: transform .3s, opacity .3s;
+  transition: transform .3s, opacity .3s, filter .3s;
 }
 
 @media (max-width: 1150px) { .game-card { width: 22.6%; } }
@@ -44,7 +44,8 @@
 }
 
 .game-cards-container:has(.game-card:hover) .game-card:not(:hover) {
-  opacity: .5;
+  opacity: .6;
+  filter: blur(1px);
 }
 
 .game-art {
